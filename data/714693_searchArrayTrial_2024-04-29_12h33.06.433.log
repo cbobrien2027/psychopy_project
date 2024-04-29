@@ -1,0 +1,11 @@
+7.0930 	ERROR 	Plugin `psychopy-cedrus` entry point requires module `psychopy_cedrus`, but it cannot be imported.
+11.3736 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+11.3931 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+1.1258 	WARNING 	t of last frame was 85.69ms (=1/11)
+1.2234 	WARNING 	t of last frame was 20.90ms (=1/47)
+2.0012 	WARNING 	t of last frame was 28.39ms (=1/35)
+2.1568 	WARNING 	t of last frame was 21.47ms (=1/46)
+4.2116 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
