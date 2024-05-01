@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
-    on May 01, 2024, at 10:57
+    on May 01, 2024, at 11:40
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -863,10 +863,154 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         opacity=None, depth=-7.0, interpolate=True)
     
     # --- Initialize components for Routine "image2_3" ---
+    greencircle1_11 = visual.ShapeStim(
+        win=win, name='greencircle1_11',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0, 0.25), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=0.0, interpolate=True)
+    greencircle2_11 = visual.ShapeStim(
+        win=win, name='greencircle2_11',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0.1875, 0.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-1.0, interpolate=True)
+    greencircle3_11 = visual.ShapeStim(
+        win=win, name='greencircle3_11',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0.25, 0), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-2.0, interpolate=True)
+    pinkcircle4_11 = visual.ShapeStim(
+        win=win, name='pinkcircle4_11',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0.1875, -.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[1.0000, -1.0000, 1.0000], fillColor=[1.0000, -1.0000, 1.0000],
+        opacity=None, depth=-3.0, interpolate=True)
+    greencircle5_11 = visual.ShapeStim(
+        win=win, name='greencircle5_11',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0, -0.25), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-4.0, interpolate=True)
+    greentriangle6_11 = visual.ShapeStim(
+        win=win, name='greentriangle6_11',
+        size=(0.1, 0.1), vertices='triangle',
+        ori=0.0, pos=(-0.1875, -.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-5.0, interpolate=True)
+    greencircle7_11 = visual.ShapeStim(
+        win=win, name='greencircle7_11',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(-0.25, 0), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-6.0, interpolate=True)
+    greencircle8_11 = visual.ShapeStim(
+        win=win, name='greencircle8_11',
+        size=(0.1, 0.1), vertices='triangle',
+        ori=0.0, pos=(-.1875, 0.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-7.0, interpolate=True)
     
     # --- Initialize components for Routine "image2_4" ---
+    greentriangle1_12 = visual.ShapeStim(
+        win=win, name='greentriangle1_12',
+        size=(0.1, 0.1), vertices='triangle',
+        ori=0.0, pos=(0, 0.25), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=0.0, interpolate=True)
+    greencircle2_12 = visual.ShapeStim(
+        win=win, name='greencircle2_12',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0.1875, 0.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-1.0, interpolate=True)
+    greencircle3_12 = visual.ShapeStim(
+        win=win, name='greencircle3_12',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0.25, 0), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-2.0, interpolate=True)
+    greencircle4_12 = visual.ShapeStim(
+        win=win, name='greencircle4_12',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0.1875, -.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-3.0, interpolate=True)
+    pinkcircle5_12 = visual.ShapeStim(
+        win=win, name='pinkcircle5_12',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0, -0.25), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[1.0000, -1.0000, 1.0000], fillColor=[1.0000, -1.0000, 1.0000],
+        opacity=None, depth=-4.0, interpolate=True)
+    greencircle6_12 = visual.ShapeStim(
+        win=win, name='greencircle6_12',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(-0.1875, -.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-5.0, interpolate=True)
+    greencircle7_12 = visual.ShapeStim(
+        win=win, name='greencircle7_12',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(-0.25, 0), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-6.0, interpolate=True)
+    greencircle8_12 = visual.ShapeStim(
+        win=win, name='greencircle8_12',
+        size=(0.1, 0.1), vertices='triangle',
+        ori=0.0, pos=(-.1875, 0.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-7.0, interpolate=True)
     
     # --- Initialize components for Routine "image2_5" ---
+    greencircle1_13 = visual.ShapeStim(
+        win=win, name='greencircle1_13',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0, 0.25), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=0.0, interpolate=True)
+    greencircle2_13 = visual.ShapeStim(
+        win=win, name='greencircle2_13',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0.1875, 0.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-1.0, interpolate=True)
+    greencircle3_13 = visual.ShapeStim(
+        win=win, name='greencircle3_13',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0.25, 0), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-2.0, interpolate=True)
+    greencircle4_13 = visual.ShapeStim(
+        win=win, name='greencircle4_13',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(0.1875, -.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-3.0, interpolate=True)
+    greentriangle5_13 = visual.ShapeStim(
+        win=win, name='greentriangle5_13',
+        size=(0.1, 0.1), vertices='triangle',
+        ori=0.0, pos=(0, -0.25), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-4.0, interpolate=True)
+    greencircle6_13 = visual.ShapeStim(
+        win=win, name='greencircle6_13',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(-0.1875, -.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-5.0, interpolate=True)
+    greencircle7_13 = visual.ShapeStim(
+        win=win, name='greencircle7_13',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(-0.25, 0), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
+        opacity=None, depth=-6.0, interpolate=True)
+    pinkcircle8_13 = visual.ShapeStim(
+        win=win, name='pinkcircle8_13',
+        size=(0.1, 0.1), vertices='circle',
+        ori=0.0, pos=(-.1875, 0.1875), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor=[1.0000, -1.0000, 1.0000], fillColor=[1.0000, -1.0000, 1.0000],
+        opacity=None, depth=-7.0, interpolate=True)
     
     # --- Initialize components for Routine "image2_6" ---
     
@@ -3857,7 +4001,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     thisExp.addData('image2_3.started', globalClock.getTime(format='float'))
     # keep track of which components have finished
-    image2_3Components = []
+    image2_3Components = [greencircle1_11, greencircle2_11, greencircle3_11, pinkcircle4_11, greencircle5_11, greentriangle6_11, greencircle7_11, greencircle8_11]
     for thisComponent in image2_3Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3872,13 +4016,285 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Run Routine "image2_3" ---
     routineForceEnded = not continueRoutine
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() < 1.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *greencircle1_11* updates
+        
+        # if greencircle1_11 is starting this frame...
+        if greencircle1_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle1_11.frameNStart = frameN  # exact frame index
+            greencircle1_11.tStart = t  # local t and not account for scr refresh
+            greencircle1_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle1_11, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle1_11.started')
+            # update status
+            greencircle1_11.status = STARTED
+            greencircle1_11.setAutoDraw(True)
+        
+        # if greencircle1_11 is active this frame...
+        if greencircle1_11.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle1_11 is stopping this frame...
+        if greencircle1_11.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle1_11.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle1_11.tStop = t  # not accounting for scr refresh
+                greencircle1_11.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle1_11.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle1_11.stopped')
+                # update status
+                greencircle1_11.status = FINISHED
+                greencircle1_11.setAutoDraw(False)
+        
+        # *greencircle2_11* updates
+        
+        # if greencircle2_11 is starting this frame...
+        if greencircle2_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle2_11.frameNStart = frameN  # exact frame index
+            greencircle2_11.tStart = t  # local t and not account for scr refresh
+            greencircle2_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle2_11, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle2_11.started')
+            # update status
+            greencircle2_11.status = STARTED
+            greencircle2_11.setAutoDraw(True)
+        
+        # if greencircle2_11 is active this frame...
+        if greencircle2_11.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle2_11 is stopping this frame...
+        if greencircle2_11.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle2_11.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle2_11.tStop = t  # not accounting for scr refresh
+                greencircle2_11.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle2_11.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle2_11.stopped')
+                # update status
+                greencircle2_11.status = FINISHED
+                greencircle2_11.setAutoDraw(False)
+        
+        # *greencircle3_11* updates
+        
+        # if greencircle3_11 is starting this frame...
+        if greencircle3_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle3_11.frameNStart = frameN  # exact frame index
+            greencircle3_11.tStart = t  # local t and not account for scr refresh
+            greencircle3_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle3_11, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle3_11.started')
+            # update status
+            greencircle3_11.status = STARTED
+            greencircle3_11.setAutoDraw(True)
+        
+        # if greencircle3_11 is active this frame...
+        if greencircle3_11.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle3_11 is stopping this frame...
+        if greencircle3_11.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle3_11.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle3_11.tStop = t  # not accounting for scr refresh
+                greencircle3_11.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle3_11.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle3_11.stopped')
+                # update status
+                greencircle3_11.status = FINISHED
+                greencircle3_11.setAutoDraw(False)
+        
+        # *pinkcircle4_11* updates
+        
+        # if pinkcircle4_11 is starting this frame...
+        if pinkcircle4_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            pinkcircle4_11.frameNStart = frameN  # exact frame index
+            pinkcircle4_11.tStart = t  # local t and not account for scr refresh
+            pinkcircle4_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(pinkcircle4_11, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'pinkcircle4_11.started')
+            # update status
+            pinkcircle4_11.status = STARTED
+            pinkcircle4_11.setAutoDraw(True)
+        
+        # if pinkcircle4_11 is active this frame...
+        if pinkcircle4_11.status == STARTED:
+            # update params
+            pass
+        
+        # if pinkcircle4_11 is stopping this frame...
+        if pinkcircle4_11.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > pinkcircle4_11.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                pinkcircle4_11.tStop = t  # not accounting for scr refresh
+                pinkcircle4_11.tStopRefresh = tThisFlipGlobal  # on global time
+                pinkcircle4_11.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'pinkcircle4_11.stopped')
+                # update status
+                pinkcircle4_11.status = FINISHED
+                pinkcircle4_11.setAutoDraw(False)
+        
+        # *greencircle5_11* updates
+        
+        # if greencircle5_11 is starting this frame...
+        if greencircle5_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle5_11.frameNStart = frameN  # exact frame index
+            greencircle5_11.tStart = t  # local t and not account for scr refresh
+            greencircle5_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle5_11, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle5_11.started')
+            # update status
+            greencircle5_11.status = STARTED
+            greencircle5_11.setAutoDraw(True)
+        
+        # if greencircle5_11 is active this frame...
+        if greencircle5_11.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle5_11 is stopping this frame...
+        if greencircle5_11.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle5_11.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle5_11.tStop = t  # not accounting for scr refresh
+                greencircle5_11.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle5_11.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle5_11.stopped')
+                # update status
+                greencircle5_11.status = FINISHED
+                greencircle5_11.setAutoDraw(False)
+        
+        # *greentriangle6_11* updates
+        
+        # if greentriangle6_11 is starting this frame...
+        if greentriangle6_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greentriangle6_11.frameNStart = frameN  # exact frame index
+            greentriangle6_11.tStart = t  # local t and not account for scr refresh
+            greentriangle6_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greentriangle6_11, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greentriangle6_11.started')
+            # update status
+            greentriangle6_11.status = STARTED
+            greentriangle6_11.setAutoDraw(True)
+        
+        # if greentriangle6_11 is active this frame...
+        if greentriangle6_11.status == STARTED:
+            # update params
+            pass
+        
+        # if greentriangle6_11 is stopping this frame...
+        if greentriangle6_11.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greentriangle6_11.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greentriangle6_11.tStop = t  # not accounting for scr refresh
+                greentriangle6_11.tStopRefresh = tThisFlipGlobal  # on global time
+                greentriangle6_11.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greentriangle6_11.stopped')
+                # update status
+                greentriangle6_11.status = FINISHED
+                greentriangle6_11.setAutoDraw(False)
+        
+        # *greencircle7_11* updates
+        
+        # if greencircle7_11 is starting this frame...
+        if greencircle7_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle7_11.frameNStart = frameN  # exact frame index
+            greencircle7_11.tStart = t  # local t and not account for scr refresh
+            greencircle7_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle7_11, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle7_11.started')
+            # update status
+            greencircle7_11.status = STARTED
+            greencircle7_11.setAutoDraw(True)
+        
+        # if greencircle7_11 is active this frame...
+        if greencircle7_11.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle7_11 is stopping this frame...
+        if greencircle7_11.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle7_11.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle7_11.tStop = t  # not accounting for scr refresh
+                greencircle7_11.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle7_11.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle7_11.stopped')
+                # update status
+                greencircle7_11.status = FINISHED
+                greencircle7_11.setAutoDraw(False)
+        
+        # *greencircle8_11* updates
+        
+        # if greencircle8_11 is starting this frame...
+        if greencircle8_11.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle8_11.frameNStart = frameN  # exact frame index
+            greencircle8_11.tStart = t  # local t and not account for scr refresh
+            greencircle8_11.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle8_11, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle8_11.started')
+            # update status
+            greencircle8_11.status = STARTED
+            greencircle8_11.setAutoDraw(True)
+        
+        # if greencircle8_11 is active this frame...
+        if greencircle8_11.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle8_11 is stopping this frame...
+        if greencircle8_11.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle8_11.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle8_11.tStop = t  # not accounting for scr refresh
+                greencircle8_11.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle8_11.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle8_11.stopped')
+                # update status
+                greencircle8_11.status = FINISHED
+                greencircle8_11.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3906,16 +4322,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     thisExp.addData('image2_3.stopped', globalClock.getTime(format='float'))
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-1.000000)
     thisExp.nextEntry()
-    # the Routine "image2_3" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
     
     # --- Prepare to start Routine "image2_4" ---
     continueRoutine = True
     # update component parameters for each repeat
     thisExp.addData('image2_4.started', globalClock.getTime(format='float'))
     # keep track of which components have finished
-    image2_4Components = []
+    image2_4Components = [greentriangle1_12, greencircle2_12, greencircle3_12, greencircle4_12, pinkcircle5_12, greencircle6_12, greencircle7_12, greencircle8_12]
     for thisComponent in image2_4Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3930,13 +4349,285 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Run Routine "image2_4" ---
     routineForceEnded = not continueRoutine
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() < 1.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *greentriangle1_12* updates
+        
+        # if greentriangle1_12 is starting this frame...
+        if greentriangle1_12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greentriangle1_12.frameNStart = frameN  # exact frame index
+            greentriangle1_12.tStart = t  # local t and not account for scr refresh
+            greentriangle1_12.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greentriangle1_12, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greentriangle1_12.started')
+            # update status
+            greentriangle1_12.status = STARTED
+            greentriangle1_12.setAutoDraw(True)
+        
+        # if greentriangle1_12 is active this frame...
+        if greentriangle1_12.status == STARTED:
+            # update params
+            pass
+        
+        # if greentriangle1_12 is stopping this frame...
+        if greentriangle1_12.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greentriangle1_12.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greentriangle1_12.tStop = t  # not accounting for scr refresh
+                greentriangle1_12.tStopRefresh = tThisFlipGlobal  # on global time
+                greentriangle1_12.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greentriangle1_12.stopped')
+                # update status
+                greentriangle1_12.status = FINISHED
+                greentriangle1_12.setAutoDraw(False)
+        
+        # *greencircle2_12* updates
+        
+        # if greencircle2_12 is starting this frame...
+        if greencircle2_12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle2_12.frameNStart = frameN  # exact frame index
+            greencircle2_12.tStart = t  # local t and not account for scr refresh
+            greencircle2_12.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle2_12, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle2_12.started')
+            # update status
+            greencircle2_12.status = STARTED
+            greencircle2_12.setAutoDraw(True)
+        
+        # if greencircle2_12 is active this frame...
+        if greencircle2_12.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle2_12 is stopping this frame...
+        if greencircle2_12.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle2_12.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle2_12.tStop = t  # not accounting for scr refresh
+                greencircle2_12.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle2_12.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle2_12.stopped')
+                # update status
+                greencircle2_12.status = FINISHED
+                greencircle2_12.setAutoDraw(False)
+        
+        # *greencircle3_12* updates
+        
+        # if greencircle3_12 is starting this frame...
+        if greencircle3_12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle3_12.frameNStart = frameN  # exact frame index
+            greencircle3_12.tStart = t  # local t and not account for scr refresh
+            greencircle3_12.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle3_12, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle3_12.started')
+            # update status
+            greencircle3_12.status = STARTED
+            greencircle3_12.setAutoDraw(True)
+        
+        # if greencircle3_12 is active this frame...
+        if greencircle3_12.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle3_12 is stopping this frame...
+        if greencircle3_12.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle3_12.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle3_12.tStop = t  # not accounting for scr refresh
+                greencircle3_12.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle3_12.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle3_12.stopped')
+                # update status
+                greencircle3_12.status = FINISHED
+                greencircle3_12.setAutoDraw(False)
+        
+        # *greencircle4_12* updates
+        
+        # if greencircle4_12 is starting this frame...
+        if greencircle4_12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle4_12.frameNStart = frameN  # exact frame index
+            greencircle4_12.tStart = t  # local t and not account for scr refresh
+            greencircle4_12.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle4_12, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle4_12.started')
+            # update status
+            greencircle4_12.status = STARTED
+            greencircle4_12.setAutoDraw(True)
+        
+        # if greencircle4_12 is active this frame...
+        if greencircle4_12.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle4_12 is stopping this frame...
+        if greencircle4_12.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle4_12.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle4_12.tStop = t  # not accounting for scr refresh
+                greencircle4_12.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle4_12.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle4_12.stopped')
+                # update status
+                greencircle4_12.status = FINISHED
+                greencircle4_12.setAutoDraw(False)
+        
+        # *pinkcircle5_12* updates
+        
+        # if pinkcircle5_12 is starting this frame...
+        if pinkcircle5_12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            pinkcircle5_12.frameNStart = frameN  # exact frame index
+            pinkcircle5_12.tStart = t  # local t and not account for scr refresh
+            pinkcircle5_12.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(pinkcircle5_12, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'pinkcircle5_12.started')
+            # update status
+            pinkcircle5_12.status = STARTED
+            pinkcircle5_12.setAutoDraw(True)
+        
+        # if pinkcircle5_12 is active this frame...
+        if pinkcircle5_12.status == STARTED:
+            # update params
+            pass
+        
+        # if pinkcircle5_12 is stopping this frame...
+        if pinkcircle5_12.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > pinkcircle5_12.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                pinkcircle5_12.tStop = t  # not accounting for scr refresh
+                pinkcircle5_12.tStopRefresh = tThisFlipGlobal  # on global time
+                pinkcircle5_12.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'pinkcircle5_12.stopped')
+                # update status
+                pinkcircle5_12.status = FINISHED
+                pinkcircle5_12.setAutoDraw(False)
+        
+        # *greencircle6_12* updates
+        
+        # if greencircle6_12 is starting this frame...
+        if greencircle6_12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle6_12.frameNStart = frameN  # exact frame index
+            greencircle6_12.tStart = t  # local t and not account for scr refresh
+            greencircle6_12.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle6_12, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle6_12.started')
+            # update status
+            greencircle6_12.status = STARTED
+            greencircle6_12.setAutoDraw(True)
+        
+        # if greencircle6_12 is active this frame...
+        if greencircle6_12.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle6_12 is stopping this frame...
+        if greencircle6_12.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle6_12.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle6_12.tStop = t  # not accounting for scr refresh
+                greencircle6_12.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle6_12.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle6_12.stopped')
+                # update status
+                greencircle6_12.status = FINISHED
+                greencircle6_12.setAutoDraw(False)
+        
+        # *greencircle7_12* updates
+        
+        # if greencircle7_12 is starting this frame...
+        if greencircle7_12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle7_12.frameNStart = frameN  # exact frame index
+            greencircle7_12.tStart = t  # local t and not account for scr refresh
+            greencircle7_12.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle7_12, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle7_12.started')
+            # update status
+            greencircle7_12.status = STARTED
+            greencircle7_12.setAutoDraw(True)
+        
+        # if greencircle7_12 is active this frame...
+        if greencircle7_12.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle7_12 is stopping this frame...
+        if greencircle7_12.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle7_12.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle7_12.tStop = t  # not accounting for scr refresh
+                greencircle7_12.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle7_12.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle7_12.stopped')
+                # update status
+                greencircle7_12.status = FINISHED
+                greencircle7_12.setAutoDraw(False)
+        
+        # *greencircle8_12* updates
+        
+        # if greencircle8_12 is starting this frame...
+        if greencircle8_12.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle8_12.frameNStart = frameN  # exact frame index
+            greencircle8_12.tStart = t  # local t and not account for scr refresh
+            greencircle8_12.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle8_12, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle8_12.started')
+            # update status
+            greencircle8_12.status = STARTED
+            greencircle8_12.setAutoDraw(True)
+        
+        # if greencircle8_12 is active this frame...
+        if greencircle8_12.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle8_12 is stopping this frame...
+        if greencircle8_12.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle8_12.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle8_12.tStop = t  # not accounting for scr refresh
+                greencircle8_12.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle8_12.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle8_12.stopped')
+                # update status
+                greencircle8_12.status = FINISHED
+                greencircle8_12.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3964,16 +4655,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     thisExp.addData('image2_4.stopped', globalClock.getTime(format='float'))
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-1.000000)
     thisExp.nextEntry()
-    # the Routine "image2_4" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
     
     # --- Prepare to start Routine "image2_5" ---
     continueRoutine = True
     # update component parameters for each repeat
     thisExp.addData('image2_5.started', globalClock.getTime(format='float'))
     # keep track of which components have finished
-    image2_5Components = []
+    image2_5Components = [greencircle1_13, greencircle2_13, greencircle3_13, greencircle4_13, greentriangle5_13, greencircle6_13, greencircle7_13, pinkcircle8_13]
     for thisComponent in image2_5Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3988,13 +4682,285 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Run Routine "image2_5" ---
     routineForceEnded = not continueRoutine
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() < 1.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *greencircle1_13* updates
+        
+        # if greencircle1_13 is starting this frame...
+        if greencircle1_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle1_13.frameNStart = frameN  # exact frame index
+            greencircle1_13.tStart = t  # local t and not account for scr refresh
+            greencircle1_13.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle1_13, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle1_13.started')
+            # update status
+            greencircle1_13.status = STARTED
+            greencircle1_13.setAutoDraw(True)
+        
+        # if greencircle1_13 is active this frame...
+        if greencircle1_13.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle1_13 is stopping this frame...
+        if greencircle1_13.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle1_13.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle1_13.tStop = t  # not accounting for scr refresh
+                greencircle1_13.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle1_13.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle1_13.stopped')
+                # update status
+                greencircle1_13.status = FINISHED
+                greencircle1_13.setAutoDraw(False)
+        
+        # *greencircle2_13* updates
+        
+        # if greencircle2_13 is starting this frame...
+        if greencircle2_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle2_13.frameNStart = frameN  # exact frame index
+            greencircle2_13.tStart = t  # local t and not account for scr refresh
+            greencircle2_13.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle2_13, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle2_13.started')
+            # update status
+            greencircle2_13.status = STARTED
+            greencircle2_13.setAutoDraw(True)
+        
+        # if greencircle2_13 is active this frame...
+        if greencircle2_13.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle2_13 is stopping this frame...
+        if greencircle2_13.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle2_13.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle2_13.tStop = t  # not accounting for scr refresh
+                greencircle2_13.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle2_13.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle2_13.stopped')
+                # update status
+                greencircle2_13.status = FINISHED
+                greencircle2_13.setAutoDraw(False)
+        
+        # *greencircle3_13* updates
+        
+        # if greencircle3_13 is starting this frame...
+        if greencircle3_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle3_13.frameNStart = frameN  # exact frame index
+            greencircle3_13.tStart = t  # local t and not account for scr refresh
+            greencircle3_13.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle3_13, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle3_13.started')
+            # update status
+            greencircle3_13.status = STARTED
+            greencircle3_13.setAutoDraw(True)
+        
+        # if greencircle3_13 is active this frame...
+        if greencircle3_13.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle3_13 is stopping this frame...
+        if greencircle3_13.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle3_13.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle3_13.tStop = t  # not accounting for scr refresh
+                greencircle3_13.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle3_13.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle3_13.stopped')
+                # update status
+                greencircle3_13.status = FINISHED
+                greencircle3_13.setAutoDraw(False)
+        
+        # *greencircle4_13* updates
+        
+        # if greencircle4_13 is starting this frame...
+        if greencircle4_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle4_13.frameNStart = frameN  # exact frame index
+            greencircle4_13.tStart = t  # local t and not account for scr refresh
+            greencircle4_13.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle4_13, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle4_13.started')
+            # update status
+            greencircle4_13.status = STARTED
+            greencircle4_13.setAutoDraw(True)
+        
+        # if greencircle4_13 is active this frame...
+        if greencircle4_13.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle4_13 is stopping this frame...
+        if greencircle4_13.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle4_13.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle4_13.tStop = t  # not accounting for scr refresh
+                greencircle4_13.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle4_13.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle4_13.stopped')
+                # update status
+                greencircle4_13.status = FINISHED
+                greencircle4_13.setAutoDraw(False)
+        
+        # *greentriangle5_13* updates
+        
+        # if greentriangle5_13 is starting this frame...
+        if greentriangle5_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greentriangle5_13.frameNStart = frameN  # exact frame index
+            greentriangle5_13.tStart = t  # local t and not account for scr refresh
+            greentriangle5_13.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greentriangle5_13, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greentriangle5_13.started')
+            # update status
+            greentriangle5_13.status = STARTED
+            greentriangle5_13.setAutoDraw(True)
+        
+        # if greentriangle5_13 is active this frame...
+        if greentriangle5_13.status == STARTED:
+            # update params
+            pass
+        
+        # if greentriangle5_13 is stopping this frame...
+        if greentriangle5_13.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greentriangle5_13.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greentriangle5_13.tStop = t  # not accounting for scr refresh
+                greentriangle5_13.tStopRefresh = tThisFlipGlobal  # on global time
+                greentriangle5_13.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greentriangle5_13.stopped')
+                # update status
+                greentriangle5_13.status = FINISHED
+                greentriangle5_13.setAutoDraw(False)
+        
+        # *greencircle6_13* updates
+        
+        # if greencircle6_13 is starting this frame...
+        if greencircle6_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle6_13.frameNStart = frameN  # exact frame index
+            greencircle6_13.tStart = t  # local t and not account for scr refresh
+            greencircle6_13.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle6_13, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle6_13.started')
+            # update status
+            greencircle6_13.status = STARTED
+            greencircle6_13.setAutoDraw(True)
+        
+        # if greencircle6_13 is active this frame...
+        if greencircle6_13.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle6_13 is stopping this frame...
+        if greencircle6_13.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle6_13.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle6_13.tStop = t  # not accounting for scr refresh
+                greencircle6_13.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle6_13.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle6_13.stopped')
+                # update status
+                greencircle6_13.status = FINISHED
+                greencircle6_13.setAutoDraw(False)
+        
+        # *greencircle7_13* updates
+        
+        # if greencircle7_13 is starting this frame...
+        if greencircle7_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            greencircle7_13.frameNStart = frameN  # exact frame index
+            greencircle7_13.tStart = t  # local t and not account for scr refresh
+            greencircle7_13.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greencircle7_13, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'greencircle7_13.started')
+            # update status
+            greencircle7_13.status = STARTED
+            greencircle7_13.setAutoDraw(True)
+        
+        # if greencircle7_13 is active this frame...
+        if greencircle7_13.status == STARTED:
+            # update params
+            pass
+        
+        # if greencircle7_13 is stopping this frame...
+        if greencircle7_13.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > greencircle7_13.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                greencircle7_13.tStop = t  # not accounting for scr refresh
+                greencircle7_13.tStopRefresh = tThisFlipGlobal  # on global time
+                greencircle7_13.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'greencircle7_13.stopped')
+                # update status
+                greencircle7_13.status = FINISHED
+                greencircle7_13.setAutoDraw(False)
+        
+        # *pinkcircle8_13* updates
+        
+        # if pinkcircle8_13 is starting this frame...
+        if pinkcircle8_13.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            pinkcircle8_13.frameNStart = frameN  # exact frame index
+            pinkcircle8_13.tStart = t  # local t and not account for scr refresh
+            pinkcircle8_13.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(pinkcircle8_13, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'pinkcircle8_13.started')
+            # update status
+            pinkcircle8_13.status = STARTED
+            pinkcircle8_13.setAutoDraw(True)
+        
+        # if pinkcircle8_13 is active this frame...
+        if pinkcircle8_13.status == STARTED:
+            # update params
+            pass
+        
+        # if pinkcircle8_13 is stopping this frame...
+        if pinkcircle8_13.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > pinkcircle8_13.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                pinkcircle8_13.tStop = t  # not accounting for scr refresh
+                pinkcircle8_13.tStopRefresh = tThisFlipGlobal  # on global time
+                pinkcircle8_13.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'pinkcircle8_13.stopped')
+                # update status
+                pinkcircle8_13.status = FINISHED
+                pinkcircle8_13.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4022,9 +4988,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     thisExp.addData('image2_5.stopped', globalClock.getTime(format='float'))
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-1.000000)
     thisExp.nextEntry()
-    # the Routine "image2_5" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
     
     # --- Prepare to start Routine "image2_6" ---
     continueRoutine = True
