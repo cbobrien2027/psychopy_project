@@ -34,17 +34,18 @@ for ii in range (8):
             circle1 = visual.Circle (win = mywin, radius= 1, edges='circle', fillColor= [0, 255, 0], colorSpace = 'rgb', pos=(xvalues_range [jj], yvalues_range [jj]))
             circle1.draw()
     myphoto = mywin.update()
+    core.wait (1.0)
     #while clicked == False:
         #if mouse.isPressedIn (triangle1):
             #clicked = True
         #else:
             #core.wait (5)
-    for frames in range (frameN):
-        if mouse.isPressedIn (triangle1):
-            core.wait (0.5)
-            core.quit()
-        else:
-            core.wait (3)
+    #for frames in range (frameN):
+        #if mouse.isPressedIn (triangle1):
+            #core.wait (0.5)
+            #core.quit()
+        #else:
+            #core.wait (3)
         
     
 
@@ -57,7 +58,7 @@ for ii in range (8):
             circle1 = visual.Circle (win = mywin, radius= 1, edges='circle', fillColor= [0, 255, 0], colorSpace = 'rgb', pos=(xvalues_range [jj], yvalues_range [jj]))
             circle1.draw()
     mywin.update()
-    #core.wait (1.0)
+    core.wait (1.0)
     
 scrambled_x_range = [-3, 0, 0, 4, -3, -4, 3, 3]
 scrambled_y_range = [-3, -4, 4, 0, 3, 0, -3, 3]
@@ -74,4 +75,4 @@ for ii in range (8):
             circle1 = visual.Circle (win = mywin, radius= 1, edges='circle', fillColor= [0, 255, 0], colorSpace = 'rgb', pos=(xvalues_range [jj], yvalues_range [jj]))
             circle1.draw()
     mywin.update()
-    #core.wait (2.0)
+    core.wait (1.0)

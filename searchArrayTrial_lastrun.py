@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
-    on April 30, 2024, at 15:58
+    on Wed May  1 01:18:37 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\prami\\OneDrive\\Desktop\\CLPS_0950\\psychopy_project\\searchArrayTrial_lastrun.py',
+        originPath='/Users/carolineobrien/Documents/GitHub/psychopy_project/searchArrayTrial_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -769,9 +769,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0.25), anchor='center',
         lineWidth=1.0,     colorSpace='rgb',  lineColor=[1.0000, -1.0000, 1.0000], fillColor=[1.0000, -1.0000, 1.0000],
         opacity=None, depth=0.0, interpolate=True)
-    greencircle2_1 = visual.ShapeStim(
-        win=win, name='greencircle2_1',
-        size=(0.1, 0.1), vertices='circle',
+    greentriangle2_1 = visual.ShapeStim(
+        win=win, name='greentriangle2_1',
+        size=(0.1, 0.1), vertices='triangle',
         ori=0.0, pos=(0.1875, 0.1875), anchor='center',
         lineWidth=1.0,     colorSpace='rgb',  lineColor=[-0.1608, 0.1137, -0.7255], fillColor=[-0.1608, 0.1137, -0.7255],
         opacity=None, depth=-1.0, interpolate=True)
@@ -3143,7 +3143,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # update component parameters for each repeat
     thisExp.addData('image2_1.started', globalClock.getTime(format='float'))
     # keep track of which components have finished
-    image2_1Components = [pinkcircle1_1, greencircle2_1, greencircle3_1, greencircle4_1, greencircle5_1, greencircle6_1, greencircle7_1, greencircle8_1]
+    image2_1Components = [pinkcircle1_1, greentriangle2_1, greencircle3_1, greencircle4_1, greencircle5_1, greencircle6_1, greencircle7_1, greencircle8_1]
     for thisComponent in image2_1Components:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3200,39 +3200,39 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 pinkcircle1_1.status = FINISHED
                 pinkcircle1_1.setAutoDraw(False)
         
-        # *greencircle2_1* updates
+        # *greentriangle2_1* updates
         
-        # if greencircle2_1 is starting this frame...
-        if greencircle2_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # if greentriangle2_1 is starting this frame...
+        if greentriangle2_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            greencircle2_1.frameNStart = frameN  # exact frame index
-            greencircle2_1.tStart = t  # local t and not account for scr refresh
-            greencircle2_1.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(greencircle2_1, 'tStartRefresh')  # time at next scr refresh
+            greentriangle2_1.frameNStart = frameN  # exact frame index
+            greentriangle2_1.tStart = t  # local t and not account for scr refresh
+            greentriangle2_1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(greentriangle2_1, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'greencircle2_1.started')
+            thisExp.timestampOnFlip(win, 'greentriangle2_1.started')
             # update status
-            greencircle2_1.status = STARTED
-            greencircle2_1.setAutoDraw(True)
+            greentriangle2_1.status = STARTED
+            greentriangle2_1.setAutoDraw(True)
         
-        # if greencircle2_1 is active this frame...
-        if greencircle2_1.status == STARTED:
+        # if greentriangle2_1 is active this frame...
+        if greentriangle2_1.status == STARTED:
             # update params
             pass
         
-        # if greencircle2_1 is stopping this frame...
-        if greencircle2_1.status == STARTED:
+        # if greentriangle2_1 is stopping this frame...
+        if greentriangle2_1.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > greencircle2_1.tStartRefresh + 1.0-frameTolerance:
+            if tThisFlipGlobal > greentriangle2_1.tStartRefresh + 1.0-frameTolerance:
                 # keep track of stop time/frame for later
-                greencircle2_1.tStop = t  # not accounting for scr refresh
-                greencircle2_1.tStopRefresh = tThisFlipGlobal  # on global time
-                greencircle2_1.frameNStop = frameN  # exact frame index
+                greentriangle2_1.tStop = t  # not accounting for scr refresh
+                greentriangle2_1.tStopRefresh = tThisFlipGlobal  # on global time
+                greentriangle2_1.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'greencircle2_1.stopped')
+                thisExp.timestampOnFlip(win, 'greentriangle2_1.stopped')
                 # update status
-                greencircle2_1.status = FINISHED
-                greencircle2_1.setAutoDraw(False)
+                greentriangle2_1.status = FINISHED
+                greentriangle2_1.setAutoDraw(False)
         
         # *greencircle3_1* updates
         
