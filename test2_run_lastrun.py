@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Wed May  1 16:57:20 2024
+This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
+    on May 02, 2024, at 17:47
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ deviceManager = hardware.DeviceManager()
 # ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
-psychopyVersion = '2024.1.4'
+psychopyVersion = '2024.1.1'
 expName = 'test2_run'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
@@ -60,15 +60,12 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = (1024, 768)
 _loggingLevel = logging.getLevel('warning')
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
     if prefs.piloting['forceWindowed']:
         _fullScr = False
-        # set window size
-        _winSize = prefs.piloting['forcedWindowSize']
     # override logging level
     _loggingLevel = logging.getLevel(
         prefs.piloting['pilotLoggingLevel']
@@ -131,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/carolineobrien/Documents/GitHub/psychopy_project/test2_run_lastrun.py',
+        originPath='C:\\Users\\prami\\OneDrive\\Desktop\\CLPS_0950\\psychopy_project\\test2_run_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -185,7 +182,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=0,
+            size=(1024, 768), fullscr=_fullScr, screen=0,
             winType='pyglet', allowStencil=False,
             monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -604,6 +601,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from code
+            mouse_clicked = psychopy.event.Mouse(visible=True, newPos=[0,0], win=None)
+            
+            
+            #if mouse_clicked == triangle1:
+                
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
