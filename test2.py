@@ -29,6 +29,9 @@ for ii in possible_positions:
             circle1.color (0, 255, 0)
         circle1.draw()
     mywin.update()
+    
+mouse = event.Mouse(win=win)
+mouse.mouseClock = core.Clock()
         
 
     #while clicked == False:
