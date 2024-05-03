@@ -1,8 +1,13 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
+<<<<<<< Updated upstream
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
     on May 02, 2024, at 17:47
+=======
+This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
+    on Wed May  1 20:31:42 2024
+>>>>>>> Stashed changes
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -349,34 +354,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Start Code - component code to be run after the window creation
     
-    # --- Initialize components for Routine "routine_1" ---
-    # Run 'Begin Experiment' code from code_3
-    xvalues_range = [0, 3, 4, 3, 0, -3, -4, -3]
-    yvalues_range = [4, 3, 0, -3, -4, -3, 0, 3]
-    for jj in range (8):
-        if xvalues_range [jj] == 0 and yvalues_range [jj] == 4:
-           triangle1 = visual.Polygon(win = mywin, edges=3, radius=1.25, fillColor=[0, 255, 0], lineColor = [0, 255, 0], colorSpace = 'rgb', pos=(xvalues_range [jj], yvalues_range [jj]))
-           triangle1.draw()
-        else:
-           circle1 = visual.Circle (win = mywin, radius= 1, edges='circle', fillColor= [0, 255, 0], colorSpace = 'rgb', pos=(xvalues_range [jj], yvalues_range [jj]))
-           circle1.setAutoDraw(True)
-    
-    
     # --- Initialize components for Routine "Instruction_Page" ---
-    # Run 'Begin Experiment' code from code_2
-    from psychopy import visual, core, event, clock
-    from psychopy.hardware import keyboard
-    
-    mywin = visual.Window ([600, 600], monitor = "testMonitor", units = "deg", color = [-1, -1, -1])
-    
-    text_msg = visual.TextStim(win = mywin, text='Welcome to the experiment. Choose the triangle in the following images. Press the space bar to begin.')
-    text_msg.draw()
-    mywin.update()
-    instruction_msg_time = event.waitKeys (keyList = ['space'])
+    text = visual.TextStim(win=win, name='text',
+        text='Any text\n\nincluding line breaks',
+        font='Arial',
+        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
     
     # --- Initialize components for Routine "trial" ---
     # Run 'Begin Experiment' code from code
-    
+    mywin = visual.Window ([600, 600], monitor = "testMonitor", units = "deg", color = [-1, -1, -1])
     
     
     # create some handy timers
@@ -407,70 +396,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         format='%Y-%m-%d %Hh%M.%S.%f %z', fractionalSecondDigits=6
     )
     
-    # --- Prepare to start Routine "routine_1" ---
-    continueRoutine = True
-    # update component parameters for each repeat
-    thisExp.addData('routine_1.started', globalClock.getTime(format='float'))
-    # keep track of which components have finished
-    routine_1Components = []
-    for thisComponent in routine_1Components:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "routine_1" ---
-    routineForceEnded = not continueRoutine
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in routine_1Components:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "routine_1" ---
-    for thisComponent in routine_1Components:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    thisExp.addData('routine_1.stopped', globalClock.getTime(format='float'))
-    thisExp.nextEntry()
-    # the Routine "routine_1" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
     # --- Prepare to start Routine "Instruction_Page" ---
     continueRoutine = True
     # update component parameters for each repeat
     thisExp.addData('Instruction_Page.started', globalClock.getTime(format='float'))
     # keep track of which components have finished
-    Instruction_PageComponents = []
+    Instruction_PageComponents = [text]
     for thisComponent in Instruction_PageComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -485,13 +416,47 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Run Routine "Instruction_Page" ---
     routineForceEnded = not continueRoutine
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() < 1.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
         tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
+        
+        # *text* updates
+        
+        # if text is starting this frame...
+        if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            text.frameNStart = frameN  # exact frame index
+            text.tStart = t  # local t and not account for scr refresh
+            text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'text.started')
+            # update status
+            text.status = STARTED
+            text.setAutoDraw(True)
+        
+        # if text is active this frame...
+        if text.status == STARTED:
+            # update params
+            pass
+        
+        # if text is stopping this frame...
+        if text.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text.tStartRefresh + 1.0-frameTolerance:
+                # keep track of stop time/frame for later
+                text.tStop = t  # not accounting for scr refresh
+                text.tStopRefresh = tThisFlipGlobal  # on global time
+                text.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text.stopped')
+                # update status
+                text.status = FINISHED
+                text.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -519,12 +484,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     thisExp.addData('Instruction_Page.stopped', globalClock.getTime(format='float'))
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-1.000000)
     thisExp.nextEntry()
-    # the Routine "Instruction_Page" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    trials24 = data.TrialHandler(nReps=None, method='random', 
+    trials24 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('/Users/carolineobrien/Downloads/Conditions Spreadsheet.xlsx'),
         seed=None, name='trials24')
@@ -564,19 +532,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         for ii in possible_positions:
             if ii == triangle_pos:
-                triangle1 = visual.Polygon(win = mywin, edges=3, radius=1.25, colorSpace = 'rgb', pos=ii)
-                if triangle_color == 'g':
-                    triangle1.color = (0, 255, 0)
-                else:
-                    triangle1.color = (255, 0, 0)
-                triangle1.draw()
-            else:
-                circle1 = visual.Circle (win = mywin, radius= 1, edges='circle', colorSpace = 'rgb', pos=ii)
-                if ii == pink_circle_pos:
-                    circle1.color (255, 0, 0)
-                else:
-                    circle1.color (0, 255, 0)
-                circle1.draw()
+                triangle1 = visual.Polygon(win = mywin, pos=ii, edges=3, radius=1.25, fillColor [0, 255, 0], colorSpace = 'rgb')
+            triangle1.draw()
             mywin.update()
         # keep track of which components have finished
         trialComponents = []
@@ -641,7 +598,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed None repeats of 'trials24'
+    # completed 1.0 repeats of 'trials24'
     
     
     # mark experiment as finished
