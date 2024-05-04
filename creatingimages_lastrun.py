@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Sat May  4 11:28:14 2024
+    on Sat May  4 14:50:46 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -131,7 +131,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/carolineobrien/creatingimages_lastrun.py',
+        originPath='/Users/carolineobrien/Documents/GitHub/psychopy_project/creatingimages_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -349,8 +349,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # Start Code - component code to be run after the window creation
     
-    # --- Initialize components for Routine "instructions" ---
-    
     # --- Initialize components for Routine "trial" ---
     circle1 = visual.ShapeStim(
         win=win, name='circle1',
@@ -432,70 +430,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         format='%Y-%m-%d %Hh%M.%S.%f %z', fractionalSecondDigits=6
     )
     
-    # --- Prepare to start Routine "instructions" ---
-    continueRoutine = True
-    # update component parameters for each repeat
-    thisExp.addData('instructions.started', globalClock.getTime(format='float'))
-    # Run 'Begin Routine' code from code_2
-    instructions_msg = visual.TextStim (win, text = 'test')
-    # keep track of which components have finished
-    instructionsComponents = []
-    for thisComponent in instructionsComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
-    
-    # --- Run Routine "instructions" ---
-    routineForceEnded = not continueRoutine
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
-        
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
-        
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in instructionsComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
-        
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
-    
-    # --- Ending Routine "instructions" ---
-    for thisComponent in instructionsComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    thisExp.addData('instructions.stopped', globalClock.getTime(format='float'))
-    thisExp.nextEntry()
-    # the Routine "instructions" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
-    
     # set up handler to look after randomisation of conditions etc
     trials24 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('Downloads/Conditions Spreadsheet-2.xlsx'),
+        trialList=data.importConditions('/Users/carolineobrien/Downloads/Conditions Spreadsheet-2.xlsx'),
         seed=None, name='trials24')
     thisExp.addLoop(trials24)  # add the loop to the experiment
     thisTrials24 = trials24.trialList[0]  # so we can initialise stimuli with some values
