@@ -108,7 +108,7 @@
         <Param val="circle1" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="$circle1_pos" valType="list" updates="constant" name="pos"/>
+        <Param val="circle_pos" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="circle" valType="str" updates="None" name="shape"/>
         <Param val="(0.1, 0.1)" valType="list" updates="constant" name="size"/>
