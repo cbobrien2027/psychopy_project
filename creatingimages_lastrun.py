@@ -1,8 +1,13 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
+<<<<<<< HEAD
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
     on May 04, 2024, at 15:08
+=======
+This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
+    on Sat May  4 15:07:24 2024
+>>>>>>> 06133926ef1478dfdb02a3ec9b76ab14ef8a9c01
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -398,6 +403,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     mouse = event.Mouse(win=win)
     x, y = [None, None]
     mouse.mouseClock = core.Clock()
+    fixation = visual.ShapeStim(
+        win=win, name='fixation', vertices='cross',
+        size=(0.05, 0.05),
+        ori=0.0, pos=(0, 0), anchor='center',
+        lineWidth=1.0,     colorSpace='rgb',  lineColor='white', fillColor='white',
+        opacity=None, depth=-10.0, interpolate=True)
     
     # create some handy timers
     
@@ -430,7 +441,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials24 = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('/Users/carolineobrien/Downloads/Conditions Spreadsheet-2.xlsx'),
+        trialList=data.importConditions('Conditions Spreadsheet-2.xlsx'),
         seed=None, name='trials24')
     thisExp.addLoop(trials24)  # add the loop to the experiment
     thisTrials24 = trials24.trialList[0]  # so we can initialise stimuli with some values
@@ -460,49 +471,56 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('trial.started', globalClock.getTime(format='float'))
         # Run 'Begin Routine' code from code
-        
+        #Sets the position for the first circle.
         if triangle_pos != (0, 0.25):
             circle1_pos = (0, 0.25)
         else:
             circle1_pos = (0.1875, 0.1875)
            
+        #Sets the position for the second circle.
         if triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):
            circle2_pos = (0.1875, 0.1875)
         else:
             circle2_pos = (0.25, 0)
         
-           
+        #Sets the position for the third circle.
         if triangle_pos != (0.25, 0) and triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):
            circle3_pos = (0.25, 0)
         else:
             circle3_pos = (0.1875, -0.1875)
-           
+            
+        #Sets the position for the fourth circle.
         if triangle_pos == (0, -0.25) or triangle_pos == (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
             circle4_pos = (0.1875, -0.1875)
         else:
             circle4_pos = (0, -0.25)
            
-           
+        #Sets the position for the fifth circle.
         if triangle_pos == (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
            circle5_pos = (0, -0.25)
         else:
             circle5_pos = (-0.1875, -0.1875)
-            
+        
+        #Sets the position for the sixth circle.
         if triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
             circle6_pos = (-0.1875, -0.1875)
         else:
             circle6_pos = (-0.25, 0)
         
+        #Sets the position for the seventh circle.
         if triangle_pos == (-0.1875, 0.1875):
            circle7_pos = (-0.25, 0)
         else:
             circle7_pos = (-0.1875, 0.1875)
             
+        #Sets the color for the triangle based on the spreadsheet.
         if triangle_color == 'g':
             triangle1_color = [-0.6078, 0.6078, -0.6078]
         else:
             triangle1_color = [1.0000, -1.0000, 1.0000]
             
+        #Sets the position for the pink circle, if applicable.
+        #The rest of the circles are green.
         if circle1_pos == pink_circle_pos:
             circle1_color = [1.0000, -1.0000, 1.0000]
         else:
@@ -574,7 +592,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         mouse.clicked_name = []
         gotValidClick = False  # until a click is received
         # keep track of which components have finished
-        trialComponents = [circle1, circle2, circle3, circle4, circle5, circle6, circle7, triangle1, mouse]
+        trialComponents = [circle1, circle2, circle3, circle4, circle5, circle6, circle7, triangle1, mouse, fixation]
         for thisComponent in trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -600,7 +618,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *circle1* updates
             
             # if circle1 is starting this frame...
-            if circle1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if circle1.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 circle1.frameNStart = frameN  # exact frame index
                 circle1.tStart = t  # local t and not account for scr refresh
@@ -620,7 +638,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *circle2* updates
             
             # if circle2 is starting this frame...
-            if circle2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if circle2.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 circle2.frameNStart = frameN  # exact frame index
                 circle2.tStart = t  # local t and not account for scr refresh
@@ -640,7 +658,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *circle3* updates
             
             # if circle3 is starting this frame...
-            if circle3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if circle3.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 circle3.frameNStart = frameN  # exact frame index
                 circle3.tStart = t  # local t and not account for scr refresh
@@ -660,7 +678,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *circle4* updates
             
             # if circle4 is starting this frame...
-            if circle4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if circle4.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 circle4.frameNStart = frameN  # exact frame index
                 circle4.tStart = t  # local t and not account for scr refresh
@@ -680,7 +698,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *circle5* updates
             
             # if circle5 is starting this frame...
-            if circle5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if circle5.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 circle5.frameNStart = frameN  # exact frame index
                 circle5.tStart = t  # local t and not account for scr refresh
@@ -700,7 +718,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *circle6* updates
             
             # if circle6 is starting this frame...
-            if circle6.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if circle6.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 circle6.frameNStart = frameN  # exact frame index
                 circle6.tStart = t  # local t and not account for scr refresh
@@ -720,7 +738,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *circle7* updates
             
             # if circle7 is starting this frame...
-            if circle7.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if circle7.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 circle7.frameNStart = frameN  # exact frame index
                 circle7.tStart = t  # local t and not account for scr refresh
@@ -740,7 +758,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *triangle1* updates
             
             # if triangle1 is starting this frame...
-            if triangle1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            if triangle1.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 triangle1.frameNStart = frameN  # exact frame index
                 triangle1.tStart = t  # local t and not account for scr refresh
@@ -759,7 +777,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # *mouse* updates
             
             # if mouse is starting this frame...
-            if mouse.status == NOT_STARTED and t >= 0.0-frameTolerance:
+            if mouse.status == NOT_STARTED and t >= 1.0-frameTolerance:
                 # keep track of start time/frame for later
                 mouse.frameNStart = frameN  # exact frame index
                 mouse.tStart = t  # local t and not account for scr refresh
@@ -778,7 +796,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     if sum(buttons) > 0:  # state changed to a new click
                         # check if the mouse was inside our 'clickable' objects
                         gotValidClick = False
+<<<<<<< HEAD
                         clickableList = environmenttools.getFromNames([circle1, circle2, circle3, circle4, circle5, circle6, circle7, triangle1], namespace=locals())
+=======
+                        clickableList = environmenttools.getFromNames([triangle1,], namespace=locals())
+>>>>>>> 06133926ef1478dfdb02a3ec9b76ab14ef8a9c01
                         for obj in clickableList:
                             # is this object clicked on?
                             if obj.contains(mouse):
@@ -787,15 +809,49 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # check whether click was in correct object
                         if gotValidClick:
                             _corr = 0
-                            _corrAns = environmenttools.getFromNames(triangle1, namespace=locals())
+                            _corrAns = environmenttools.getFromNames([], namespace=locals())
                             for obj in _corrAns:
                                 # is this object clicked on?
                                 if obj.contains(mouse):
                                     _corr = 1
                             mouse.corr.append(_corr)
-                            if corr:
-                                continueRoutine = False  # end routine on correct answer
-                        continueRoutine = False  # end routine on response            
+                        if gotValidClick:  
+                            continueRoutine = False  # end routine on response
+            
+            # *fixation* updates
+            
+            # if fixation is starting this frame...
+            if fixation.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                fixation.frameNStart = frameN  # exact frame index
+                fixation.tStart = t  # local t and not account for scr refresh
+                fixation.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(fixation, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'fixation.started')
+                # update status
+                fixation.status = STARTED
+                fixation.setAutoDraw(True)
+            
+            # if fixation is active this frame...
+            if fixation.status == STARTED:
+                # update params
+                pass
+            
+            # if fixation is stopping this frame...
+            if fixation.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > fixation.tStartRefresh + 1.0-frameTolerance:
+                    # keep track of stop time/frame for later
+                    fixation.tStop = t  # not accounting for scr refresh
+                    fixation.tStopRefresh = tThisFlipGlobal  # on global time
+                    fixation.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'fixation.stopped')
+                    # update status
+                    fixation.status = FINISHED
+                    fixation.setAutoDraw(False)
+            
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
                 thisExp.status = FINISHED
@@ -833,7 +889,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if sum(buttons):
             # check if the mouse was inside our 'clickable' objects
             gotValidClick = False
+<<<<<<< HEAD
             clickableList = environmenttools.getFromNames([circle1, circle2, circle3, circle4, circle5, circle6, circle7, triangle1], namespace=locals())
+=======
+            clickableList = environmenttools.getFromNames([triangle1,], namespace=locals())
+>>>>>>> 06133926ef1478dfdb02a3ec9b76ab14ef8a9c01
             for obj in clickableList:
                 # is this object clicked on?
                 if obj.contains(mouse):
