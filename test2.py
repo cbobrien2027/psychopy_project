@@ -24,9 +24,9 @@ for ii in possible_positions:
     else:
         circle1 = visual.Circle (win = mywin, radius= 1, edges='circle', colorSpace = 'rgb', pos=ii)
         if ii == pink_circle_pos:
-            circle1.color (255, 0, 0)
+            circle1.color = (255, 0, 0)
         else:
-            circle1.color (0, 255, 0)
+            circle1.color = (0, 255, 0)
         circle1.draw()
     mywin.update()
     

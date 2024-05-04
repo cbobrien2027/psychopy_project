@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File “/Volumes/PsychoPy-2024.1.4/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/app/builder/builder.py”, line 778, in fileOpen
+  File “/Volumes/PsychoPy-2024.1.4/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/app/runner/runner.py”, line 114, in addTask
+  File “/Volumes/PsychoPy-2024.1.4/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/app/runner/runner.py”, line 808, in addTask
+  File “/Volumes/PsychoPy-2024.1.4/PsychoPy.app/Contents/Resources/lib/python3.8/psychopy/experiment/_experiment.py”, line 1064, in getRunModeFromFile
+  File “/Volumes/PsychoPy-2024.1.4/PsychoPy.app/Contents/Resources/lib/python3.8/xml/etree/ElementTree.py”, line 595, in parse
+xml.etree.ElementTree.ParseError: not well-formed (invalid token): line 114, column 1
