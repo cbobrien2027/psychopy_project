@@ -1,0 +1,118 @@
+4.0891 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+4.0899 	INFO 	Loaded monitor calibration from ['2024_04_28 13:59']
+4.9457 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002D50FF2BEB0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002D50FF2BE50>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002D50FF2BCA0>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002D510248160>, multiSample=False, name='window1', numSamples=2, pos=[448.0, 156.0], screen=0, size=array([1024,  768]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.9458 	EXP 	window1: mouseVisible = True
+4.9458 	EXP 	window1: backgroundImage = ''
+4.9458 	EXP 	window1: backgroundFit = 'none'
+4.9460 	EXP 	window1: mouseVisible = True
+4.9461 	EXP 	window1: mouseVisible = True
+4.9478 	EXP 	window1: mouseVisible = True
+4.9482 	EXP 	window1: mouseVisible = True
+4.9627 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9638 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9648 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9661 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9674 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9681 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9692 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9705 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9711 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9718 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9729 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9740 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9750 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9761 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9771 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9783 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9795 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9802 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9811 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9830 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9838 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.9841 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.9896 	DEBUG 	Upload of Texture Font fontname complete
+4.9913 	EXP 	window1: mouseVisible = True
+4.9914 	EXP 	window1: mouseVisible = True
+4.9918 	EXP 	window1: mouseVisible = True
+4.9922 	EXP 	window1: mouseVisible = True
+5.0057 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.0070 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.0084 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.0086 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.0145 	DEBUG 	Upload of Texture Font fontname complete
+5.0164 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+5.0164 	EXP 	window1: recordFrameIntervals = False
+5.1936 	EXP 	window1: recordFrameIntervals = True
+5.3765 	EXP 	Screen (0) actual frame rate measured at 60.14Hz
+5.3765 	EXP 	window1: recordFrameIntervals = False
+5.3766 	EXP 	window1: mouseVisible = False
+5.3770 	EXP 	window1: mouseVisible = True
+5.3772 	EXP 	window1: mouseVisible = True
+5.3777 	EXP 	window1: mouseVisible = True
+5.3781 	EXP 	window1: mouseVisible = True
+5.3927 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3936 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3947 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3962 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3976 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3991 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.3999 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.4011 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.4025 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.4039 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+5.4042 	DEBUG 	Uploading Texture Font fontname to graphics card
+5.4048 	DEBUG 	Upload of Texture Font fontname complete
+5.4061 	EXP 	window1: mouseVisible = True
+5.4062 	EXP 	window1: mouseVisible = True
+5.4067 	EXP 	window1: mouseVisible = True
+5.4073 	EXP 	window1: mouseVisible = True
+5.4313 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+6.7364 	INFO 	keyboard.Keyboard is using iohub backend.
+6.7364 	EXP 	test_3: status = STARTED
+6.7365 	EXP 	window1: mouseVisible = True
+6.7392 	EXP 	Created circle1 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='circle1', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+6.7392 	EXP 	window1: mouseVisible = True
+6.7421 	EXP 	Created circle2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, draggable=False, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='circle2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+0.0215 	DEBUG 	Read csv file with pandas: C:/Users/prami/OneDrive/Desktop/Conditions_Spreadsheet.csv
+0.0221 	DEBUG 	Clearing unnamed columns from C:/Users/prami/OneDrive/Desktop/Conditions_Spreadsheet.csv
+0.0225 	EXP 	Imported C:/Users/prami/OneDrive/Desktop/Conditions_Spreadsheet.csv as conditions, 24 conditions, 3 params
+0.0355 	EXP 	Created sequence: random, trialTypes=24, nReps=1, seed=None
+0.0357 	EXP 	New trial (rep=0, index=0): OrderedDict([('triangle_pos', '(3, 3)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)])
+0.0500 	EXP 	circle1: autoDraw = True
+0.0500 	EXP 	circle2: autoDraw = True
+1.0032 	EXP 	New trial (rep=0, index=1): OrderedDict([('triangle_pos', '(3, -3)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)])
+1.0184 	EXP 	circle1: autoDraw = False
+1.0184 	EXP 	circle2: autoDraw = False
+1.0184 	EXP 	circle1: autoDraw = True
+1.0184 	EXP 	circle2: autoDraw = True
+2.0032 	EXP 	New trial (rep=0, index=2): OrderedDict([('triangle_pos', '(0, 4)'), ('triangle_color', 'g'), ('pink_circle_pos', '(-3, -3)')])
+2.0179 	EXP 	circle1: autoDraw = False
+2.0179 	EXP 	circle2: autoDraw = False
+2.0179 	EXP 	circle1: autoDraw = True
+2.0179 	EXP 	circle2: autoDraw = True
+3.0036 	EXP 	New trial (rep=0, index=3): OrderedDict([('triangle_pos', '(-3, -3)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)])
+3.0180 	EXP 	circle1: autoDraw = False
+3.0180 	EXP 	circle2: autoDraw = False
+3.0180 	EXP 	circle1: autoDraw = True
+3.0180 	EXP 	circle2: autoDraw = True
+3.2714 	DATA 	Mouse: Left button down, pos=(575,425)
+3.4874 	DATA 	Mouse:  Left button up, pos=(575,425)
+4.0037 	EXP 	New trial (rep=0, index=4): OrderedDict([('triangle_pos', '(-3, 3)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)])
+4.0180 	EXP 	circle1: autoDraw = False
+4.0180 	EXP 	circle2: autoDraw = False
+4.0180 	EXP 	circle1: autoDraw = True
+4.0180 	EXP 	circle2: autoDraw = True
+5.0041 	EXP 	New trial (rep=0, index=5): OrderedDict([('triangle_pos', '(-4, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', '(3, -3)')])
+5.0185 	EXP 	circle1: autoDraw = False
+5.0185 	EXP 	circle2: autoDraw = False
+5.0185 	EXP 	circle1: autoDraw = True
+5.0185 	EXP 	circle2: autoDraw = True
+5.8056 	DATA 	Keypress: escape
+5.9370 	EXP 	test_3: status = STOPPED
+5.9514 	EXP 	circle1: autoDraw = False
+5.9514 	EXP 	circle2: autoDraw = False
+5.9532 	EXP 	test_3: status = STOPPED
+5.9557 	INFO 	saved data to 'C:\\Users\\prami\\OneDrive\\Desktop\\CLPS_0950\\psychopy_project\\data/628846_test_3_2024-05-03_12h31.27.176.csv'
+5.9561 	INFO 	saved data to C:\Users\prami\OneDrive\Desktop\CLPS_0950\psychopy_project\data/628846_test_3_2024-05-03_12h31.27.176.psydat
+6.0023 	EXP 	window1: mouseVisible = True
+6.4639 	DEBUG 	Saving data for test_3 ExperimentHandler
