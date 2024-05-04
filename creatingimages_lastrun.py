@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Sat May  4 14:50:46 2024
+This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
+    on May 04, 2024, at 15:08
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ deviceManager = hardware.DeviceManager()
 # ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
-psychopyVersion = '2024.1.4'
+psychopyVersion = '2024.1.1'
 expName = 'creatingimages'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
@@ -60,15 +60,12 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = False
-_winSize = [1000, 900]
 _loggingLevel = logging.getLevel('warning')
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
     if prefs.piloting['forceWindowed']:
         _fullScr = False
-        # set window size
-        _winSize = prefs.piloting['forcedWindowSize']
     # override logging level
     _loggingLevel = logging.getLevel(
         prefs.piloting['pilotLoggingLevel']
@@ -131,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/carolineobrien/Documents/GitHub/psychopy_project/creatingimages_lastrun.py',
+        originPath='C:\\Users\\prami\\OneDrive\\Desktop\\CLPS_0950\\psychopy_project\\creatingimages_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -182,7 +179,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=0,
+            size=[1000, 900], fullscr=_fullScr, screen=0,
             winType='pyglet', allowStencil=False,
             monitor='testMonitor', color=[-1,-1,-1], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -574,6 +571,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         triangle1.setLineColor(triangle1_color)
         # setup some python lists for storing info about the mouse
         mouse.corr = []
+        mouse.clicked_name = []
         gotValidClick = False  # until a click is received
         # keep track of which components have finished
         trialComponents = [circle1, circle2, circle3, circle4, circle5, circle6, circle7, triangle1, mouse]
@@ -778,6 +776,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if buttons != prevButtonState:  # button state changed?
                     prevButtonState = buttons
                     if sum(buttons) > 0:  # state changed to a new click
+                        # check if the mouse was inside our 'clickable' objects
+                        gotValidClick = False
+                        clickableList = environmenttools.getFromNames([circle1, circle2, circle3, circle4, circle5, circle6, circle7, triangle1], namespace=locals())
+                        for obj in clickableList:
+                            # is this object clicked on?
+                            if obj.contains(mouse):
+                                gotValidClick = True
+                                mouse.clicked_name.append(obj.name)
                         # check whether click was in correct object
                         if gotValidClick:
                             _corr = 0
@@ -824,12 +830,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # store data for trials24 (TrialHandler)
         x, y = mouse.getPos()
         buttons = mouse.getPressed()
+        if sum(buttons):
+            # check if the mouse was inside our 'clickable' objects
+            gotValidClick = False
+            clickableList = environmenttools.getFromNames([circle1, circle2, circle3, circle4, circle5, circle6, circle7, triangle1], namespace=locals())
+            for obj in clickableList:
+                # is this object clicked on?
+                if obj.contains(mouse):
+                    gotValidClick = True
+                    mouse.clicked_name.append(obj.name)
         trials24.addData('mouse.x', x)
         trials24.addData('mouse.y', y)
         trials24.addData('mouse.leftButton', buttons[0])
         trials24.addData('mouse.midButton', buttons[1])
         trials24.addData('mouse.rightButton', buttons[2])
         trials24.addData('mouse.corr', mouse.corr)
+        if len(mouse.clicked_name):
+            trials24.addData('mouse.clicked_name', mouse.clicked_name[0])
         # the Routine "trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
