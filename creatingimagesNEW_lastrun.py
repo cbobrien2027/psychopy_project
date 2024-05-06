@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Sun May  5 22:59:59 2024
+    on Sun May  5 23:22:36 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -613,11 +613,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('code_attempt.started', globalClock.getTime(format='float'))
         # Run 'Begin Routine' code from code_2
-        fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.1, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
+        #Caroline coded.
+        fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
         fixation_square.draw()
         win.update()
         core.wait (0.2)
         
+        #Garv coded.
+        mouse.setPos(0)
+        
+        
+        #Caroline Coded
         mouse = event.Mouse(win = win)
         mouse.mouseClock = core.Clock()
         #Sets circle1 position.
@@ -693,9 +699,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             circles.draw()
         triangle1 = visual.Polygon (win = win, edges = 3, pos = triangle_pos, size = 0.125, fillColor = triangle1_color, lineColor = triangle1_color, fillColorSpace = 'rgb', lineColorSpace = 'rgb')
         triangle1.draw()
+        fixation_square.draw()
         win.update()
         while triangle1.contains(mouse) == False:
-            core.wait (2)
+            core.wait (1)
             
         if triangle1.contains(mouse) == True:
             continueRoutine = False
@@ -755,399 +762,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # the Routine "code_attempt" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
-        
-        # --- Prepare to start Routine "builder_attempt" ---
-        continueRoutine = True
-        # update component parameters for each repeat
-        thisExp.addData('builder_attempt.started', globalClock.getTime(format='float'))
-        # Run 'Begin Routine' code from code
-        #Caroline coded lines 6-90.
-        #Sets circle1 position.
-        if triangle_pos != (0, 0.25):
-            circle1_pos = (0, 0.25)
-        else:
-            circle1_pos = (0.1875, 0.1875)
-           
-        #Sets circle2 position.
-        if triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):
-            circle2_pos = (0.1875, 0.1875)
-        else:
-            circle2_pos = (0.25, 0)
-        
-        #Sets circle3 position.
-        if triangle_pos != (0.25, 0) and triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):
-            circle3_pos = (0.25, 0)
-        else:
-            circle3_pos = (0.1875, -0.1875)
-        
-        #Sets circle4 position.
-        if triangle_pos == (0, -0.25) or triangle_pos == (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
-            circle4_pos = (0.1875, -0.1875)
-        else:
-            circle4_pos = (0, -0.25)
-            
-        #Sets circle5 position.
-        if triangle_pos== (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
-            circle5_pos = (0, -0.25)
-        else:
-            circle5_pos = (-0.1875, -0.1875)
-            
-        #Sets circle6 position.
-        if triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
-            circle6_pos = (-0.1875, -0.1875)
-        else:
-            circle6_pos = (-0.25, 0)
-            
-        #Sets circle7 position.
-        if triangle_pos == (-0.1875, 0.1875):
-            circle7_pos = (-0.25, 0)
-        else:
-            circle7_pos = (-0.1875, 0.1875)
-        
-        #Sets the triangle color.
-        if triangle_color == 'g':
-            triangle1_color = [-0.6078, 0.6708, -0.6708]
-        else:
-            triangle1_color = [1.0000, -1.0000, 1.0000]
-            
-        #Sets the circle colors - all green except if the position matches pink_circle_pos.
-        #Then it is set to pink.
-        if circle1_pos == pink_circle_pos:
-            circle1_color = [1.0000, -1.0000, 1.0000]
-        else:
-            circle1_color = [-0.6078, 0.6708, -0.6708]
-            
-        if circle2_pos == pink_circle_pos:
-            circle2_color = [1.0000, -1.0000, 1.0000]
-        else:
-            circle2_color = [-0.6078, 0.6708, -0.6708]
-            
-        if circle3_pos == pink_circle_pos:
-            circle3_color = [1.0000, -1.0000, 1.0000]
-        else:
-            circle3_color = [-0.6078, 0.6708, -0.6708]
-            
-        if circle4_pos == pink_circle_pos:
-            circle4_color = [1.0000, -1.0000, 1.0000]
-        else:
-            circle4_color = [-0.6078, 0.6708, -0.6708]
-            
-        if circle5_pos == pink_circle_pos:
-            circle5_color = [1.0000, -1.0000, 1.0000]
-        else:
-            circle5_color = [-0.6078, 0.6708, -0.6708]
-            
-        if circle6_pos == pink_circle_pos:
-            circle6_color = [1.0000, -1.0000, 1.0000]
-        else:
-            circle6_color = [-0.6078, 0.6708, -0.6708]
-            
-        if circle7_pos == pink_circle_pos:
-            circle7_color = [1.0000, -1.0000, 1.0000]
-        else:
-            circle7_color = [-0.6078, 0.6708, -0.6708]
-        
-        #Garv coded.
-        mouse.setPos(0)
-        circle1.setFillColor(circle1_color)
-        circle1.setPos(circle1_pos)
-        circle1.setLineColor(circle1_color)
-        circle2.setFillColor(circle2_color)
-        circle2.setPos(circle2_pos)
-        circle2.setLineColor(circle2_color)
-        circle3.setFillColor(circle3_color)
-        circle3.setPos(circle3_pos)
-        circle3.setLineColor(circle3_color)
-        circle4.setFillColor(circle4_color)
-        circle4.setPos(circle4_pos)
-        circle4.setLineColor(circle4_color)
-        circle5.setFillColor(circle5_color)
-        circle5.setPos(circle5_pos)
-        circle5.setLineColor(circle5_color)
-        circle6.setFillColor(circle6_color)
-        circle6.setPos(circle6_pos)
-        circle6.setLineColor(circle6_color)
-        circle7.setFillColor(circle7_color)
-        circle7.setPos(circle7_pos)
-        circle7.setLineColor(circle7_color)
-        triangle1.setFillColor(triangle1_color)
-        triangle1.setPos(triangle_pos)
-        triangle1.setLineColor(triangle1_color)
-        # setup some python lists for storing info about the mouse
-        mouse.corr = []
-        mouse.clicked_name = []
-        gotValidClick = False  # until a click is received
-        # keep track of which components have finished
-        builder_attemptComponents = [circle1, circle2, circle3, circle4, circle5, circle6, circle7, triangle1, mouse]
-        for thisComponent in builder_attemptComponents:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        frameN = -1
-        
-        # --- Run Routine "builder_attempt" ---
-        routineForceEnded = not continueRoutine
-        while continueRoutine:
-            # get current time
-            t = routineTimer.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # *circle1* updates
-            
-            # if circle1 is starting this frame...
-            if circle1.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
-                # keep track of start time/frame for later
-                circle1.frameNStart = frameN  # exact frame index
-                circle1.tStart = t  # local t and not account for scr refresh
-                circle1.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(circle1, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'circle1.started')
-                # update status
-                circle1.status = STARTED
-                circle1.setAutoDraw(True)
-            
-            # if circle1 is active this frame...
-            if circle1.status == STARTED:
-                # update params
-                pass
-            
-            # *circle2* updates
-            
-            # if circle2 is starting this frame...
-            if circle2.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
-                # keep track of start time/frame for later
-                circle2.frameNStart = frameN  # exact frame index
-                circle2.tStart = t  # local t and not account for scr refresh
-                circle2.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(circle2, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'circle2.started')
-                # update status
-                circle2.status = STARTED
-                circle2.setAutoDraw(True)
-            
-            # if circle2 is active this frame...
-            if circle2.status == STARTED:
-                # update params
-                pass
-            
-            # *circle3* updates
-            
-            # if circle3 is starting this frame...
-            if circle3.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
-                # keep track of start time/frame for later
-                circle3.frameNStart = frameN  # exact frame index
-                circle3.tStart = t  # local t and not account for scr refresh
-                circle3.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(circle3, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'circle3.started')
-                # update status
-                circle3.status = STARTED
-                circle3.setAutoDraw(True)
-            
-            # if circle3 is active this frame...
-            if circle3.status == STARTED:
-                # update params
-                pass
-            
-            # *circle4* updates
-            
-            # if circle4 is starting this frame...
-            if circle4.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
-                # keep track of start time/frame for later
-                circle4.frameNStart = frameN  # exact frame index
-                circle4.tStart = t  # local t and not account for scr refresh
-                circle4.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(circle4, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'circle4.started')
-                # update status
-                circle4.status = STARTED
-                circle4.setAutoDraw(True)
-            
-            # if circle4 is active this frame...
-            if circle4.status == STARTED:
-                # update params
-                pass
-            
-            # *circle5* updates
-            
-            # if circle5 is starting this frame...
-            if circle5.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
-                # keep track of start time/frame for later
-                circle5.frameNStart = frameN  # exact frame index
-                circle5.tStart = t  # local t and not account for scr refresh
-                circle5.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(circle5, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'circle5.started')
-                # update status
-                circle5.status = STARTED
-                circle5.setAutoDraw(True)
-            
-            # if circle5 is active this frame...
-            if circle5.status == STARTED:
-                # update params
-                pass
-            
-            # *circle6* updates
-            
-            # if circle6 is starting this frame...
-            if circle6.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
-                # keep track of start time/frame for later
-                circle6.frameNStart = frameN  # exact frame index
-                circle6.tStart = t  # local t and not account for scr refresh
-                circle6.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(circle6, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'circle6.started')
-                # update status
-                circle6.status = STARTED
-                circle6.setAutoDraw(True)
-            
-            # if circle6 is active this frame...
-            if circle6.status == STARTED:
-                # update params
-                pass
-            
-            # *circle7* updates
-            
-            # if circle7 is starting this frame...
-            if circle7.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
-                # keep track of start time/frame for later
-                circle7.frameNStart = frameN  # exact frame index
-                circle7.tStart = t  # local t and not account for scr refresh
-                circle7.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(circle7, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'circle7.started')
-                # update status
-                circle7.status = STARTED
-                circle7.setAutoDraw(True)
-            
-            # if circle7 is active this frame...
-            if circle7.status == STARTED:
-                # update params
-                pass
-            
-            # *triangle1* updates
-            
-            # if triangle1 is starting this frame...
-            if triangle1.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
-                # keep track of start time/frame for later
-                triangle1.frameNStart = frameN  # exact frame index
-                triangle1.tStart = t  # local t and not account for scr refresh
-                triangle1.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(triangle1, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'triangle1.started')
-                # update status
-                triangle1.status = STARTED
-                triangle1.setAutoDraw(True)
-            
-            # if triangle1 is active this frame...
-            if triangle1.status == STARTED:
-                # update params
-                pass
-            # *mouse* updates
-            
-            # if mouse is starting this frame...
-            if mouse.status == NOT_STARTED and t >= 0-frameTolerance:
-                # keep track of start time/frame for later
-                mouse.frameNStart = frameN  # exact frame index
-                mouse.tStart = t  # local t and not account for scr refresh
-                mouse.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(mouse, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.addData('mouse.started', t)
-                # update status
-                mouse.status = STARTED
-                mouse.mouseClock.reset()
-                prevButtonState = mouse.getPressed()  # if button is down already this ISN'T a new click
-            if mouse.status == STARTED:  # only update if started and not finished!
-                buttons = mouse.getPressed()
-                if buttons != prevButtonState:  # button state changed?
-                    prevButtonState = buttons
-                    if sum(buttons) > 0:  # state changed to a new click
-                        # check if the mouse was inside our 'clickable' objects
-                        gotValidClick = False
-                        clickableList = environmenttools.getFromNames([triangle1], namespace=locals())
-                        for obj in clickableList:
-                            # is this object clicked on?
-                            if obj.contains(mouse):
-                                gotValidClick = True
-                                mouse.clicked_name.append(obj.name)
-                        # check whether click was in correct object
-                        if gotValidClick:
-                            _corr = 0
-                            _corrAns = environmenttools.getFromNames(triangle1, namespace=locals())
-                            for obj in _corrAns:
-                                # is this object clicked on?
-                                if obj.contains(mouse):
-                                    _corr = 1
-                            mouse.corr.append(_corr)
-                        if gotValidClick:  
-                            continueRoutine = False  # end routine on response
-            
-            # check for quit (typically the Esc key)
-            if defaultKeyboard.getKeys(keyList=["escape"]):
-                thisExp.status = FINISHED
-            if thisExp.status == FINISHED or endExpNow:
-                endExperiment(thisExp, win=win)
-                return
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                routineForceEnded = True
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in builder_attemptComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # --- Ending Routine "builder_attempt" ---
-        for thisComponent in builder_attemptComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        thisExp.addData('builder_attempt.stopped', globalClock.getTime(format='float'))
-        # store data for trials (TrialHandler)
-        x, y = mouse.getPos()
-        buttons = mouse.getPressed()
-        if sum(buttons):
-            # check if the mouse was inside our 'clickable' objects
-            gotValidClick = False
-            clickableList = environmenttools.getFromNames([triangle1], namespace=locals())
-            for obj in clickableList:
-                # is this object clicked on?
-                if obj.contains(mouse):
-                    gotValidClick = True
-                    mouse.clicked_name.append(obj.name)
-        trials.addData('mouse.x', x)
-        trials.addData('mouse.y', y)
-        trials.addData('mouse.leftButton', buttons[0])
-        trials.addData('mouse.midButton', buttons[1])
-        trials.addData('mouse.rightButton', buttons[2])
-        trials.addData('mouse.corr', mouse.corr)
-        if len(mouse.clicked_name):
-            trials.addData('mouse.clicked_name', mouse.clicked_name[0])
-        # the Routine "builder_attempt" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
         thisExp.nextEntry()
         
         if thisSession is not None:
@@ -1155,6 +769,400 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             thisSession.sendExperimentData()
     # completed 1.0 repeats of 'trials'
     
+    
+    # --- Prepare to start Routine "builder_attempt" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('builder_attempt.started', globalClock.getTime(format='float'))
+    # Run 'Begin Routine' code from code
+    #Caroline coded lines 6-90.
+    #Sets circle1 position.
+    if triangle_pos != (0, 0.25):
+        circle1_pos = (0, 0.25)
+    else:
+        circle1_pos = (0.1875, 0.1875)
+       
+    #Sets circle2 position.
+    if triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):
+        circle2_pos = (0.1875, 0.1875)
+    else:
+        circle2_pos = (0.25, 0)
+    
+    #Sets circle3 position.
+    if triangle_pos != (0.25, 0) and triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):
+        circle3_pos = (0.25, 0)
+    else:
+        circle3_pos = (0.1875, -0.1875)
+    
+    #Sets circle4 position.
+    if triangle_pos == (0, -0.25) or triangle_pos == (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
+        circle4_pos = (0.1875, -0.1875)
+    else:
+        circle4_pos = (0, -0.25)
+        
+    #Sets circle5 position.
+    if triangle_pos== (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
+        circle5_pos = (0, -0.25)
+    else:
+        circle5_pos = (-0.1875, -0.1875)
+        
+    #Sets circle6 position.
+    if triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
+        circle6_pos = (-0.1875, -0.1875)
+    else:
+        circle6_pos = (-0.25, 0)
+        
+    #Sets circle7 position.
+    if triangle_pos == (-0.1875, 0.1875):
+        circle7_pos = (-0.25, 0)
+    else:
+        circle7_pos = (-0.1875, 0.1875)
+    
+    #Sets the triangle color.
+    if triangle_color == 'g':
+        triangle1_color = [-0.6078, 0.6708, -0.6708]
+    else:
+        triangle1_color = [1.0000, -1.0000, 1.0000]
+        
+    #Sets the circle colors - all green except if the position matches pink_circle_pos.
+    #Then it is set to pink.
+    if circle1_pos == pink_circle_pos:
+        circle1_color = [1.0000, -1.0000, 1.0000]
+    else:
+        circle1_color = [-0.6078, 0.6708, -0.6708]
+        
+    if circle2_pos == pink_circle_pos:
+        circle2_color = [1.0000, -1.0000, 1.0000]
+    else:
+        circle2_color = [-0.6078, 0.6708, -0.6708]
+        
+    if circle3_pos == pink_circle_pos:
+        circle3_color = [1.0000, -1.0000, 1.0000]
+    else:
+        circle3_color = [-0.6078, 0.6708, -0.6708]
+        
+    if circle4_pos == pink_circle_pos:
+        circle4_color = [1.0000, -1.0000, 1.0000]
+    else:
+        circle4_color = [-0.6078, 0.6708, -0.6708]
+        
+    if circle5_pos == pink_circle_pos:
+        circle5_color = [1.0000, -1.0000, 1.0000]
+    else:
+        circle5_color = [-0.6078, 0.6708, -0.6708]
+        
+    if circle6_pos == pink_circle_pos:
+        circle6_color = [1.0000, -1.0000, 1.0000]
+    else:
+        circle6_color = [-0.6078, 0.6708, -0.6708]
+        
+    if circle7_pos == pink_circle_pos:
+        circle7_color = [1.0000, -1.0000, 1.0000]
+    else:
+        circle7_color = [-0.6078, 0.6708, -0.6708]
+    
+    #Garv coded.
+    mouse.setPos(0)
+    circle1.setFillColor(circle1_color)
+    circle1.setPos(circle1_pos)
+    circle1.setLineColor(circle1_color)
+    circle2.setFillColor(circle2_color)
+    circle2.setPos(circle2_pos)
+    circle2.setLineColor(circle2_color)
+    circle3.setFillColor(circle3_color)
+    circle3.setPos(circle3_pos)
+    circle3.setLineColor(circle3_color)
+    circle4.setFillColor(circle4_color)
+    circle4.setPos(circle4_pos)
+    circle4.setLineColor(circle4_color)
+    circle5.setFillColor(circle5_color)
+    circle5.setPos(circle5_pos)
+    circle5.setLineColor(circle5_color)
+    circle6.setFillColor(circle6_color)
+    circle6.setPos(circle6_pos)
+    circle6.setLineColor(circle6_color)
+    circle7.setFillColor(circle7_color)
+    circle7.setPos(circle7_pos)
+    circle7.setLineColor(circle7_color)
+    triangle1.setFillColor(triangle1_color)
+    triangle1.setPos(triangle_pos)
+    triangle1.setLineColor(triangle1_color)
+    # setup some python lists for storing info about the mouse
+    mouse.corr = []
+    mouse.clicked_name = []
+    gotValidClick = False  # until a click is received
+    # keep track of which components have finished
+    builder_attemptComponents = [circle1, circle2, circle3, circle4, circle5, circle6, circle7, triangle1, mouse]
+    for thisComponent in builder_attemptComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "builder_attempt" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *circle1* updates
+        
+        # if circle1 is starting this frame...
+        if circle1.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+            # keep track of start time/frame for later
+            circle1.frameNStart = frameN  # exact frame index
+            circle1.tStart = t  # local t and not account for scr refresh
+            circle1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(circle1, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'circle1.started')
+            # update status
+            circle1.status = STARTED
+            circle1.setAutoDraw(True)
+        
+        # if circle1 is active this frame...
+        if circle1.status == STARTED:
+            # update params
+            pass
+        
+        # *circle2* updates
+        
+        # if circle2 is starting this frame...
+        if circle2.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+            # keep track of start time/frame for later
+            circle2.frameNStart = frameN  # exact frame index
+            circle2.tStart = t  # local t and not account for scr refresh
+            circle2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(circle2, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'circle2.started')
+            # update status
+            circle2.status = STARTED
+            circle2.setAutoDraw(True)
+        
+        # if circle2 is active this frame...
+        if circle2.status == STARTED:
+            # update params
+            pass
+        
+        # *circle3* updates
+        
+        # if circle3 is starting this frame...
+        if circle3.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+            # keep track of start time/frame for later
+            circle3.frameNStart = frameN  # exact frame index
+            circle3.tStart = t  # local t and not account for scr refresh
+            circle3.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(circle3, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'circle3.started')
+            # update status
+            circle3.status = STARTED
+            circle3.setAutoDraw(True)
+        
+        # if circle3 is active this frame...
+        if circle3.status == STARTED:
+            # update params
+            pass
+        
+        # *circle4* updates
+        
+        # if circle4 is starting this frame...
+        if circle4.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+            # keep track of start time/frame for later
+            circle4.frameNStart = frameN  # exact frame index
+            circle4.tStart = t  # local t and not account for scr refresh
+            circle4.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(circle4, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'circle4.started')
+            # update status
+            circle4.status = STARTED
+            circle4.setAutoDraw(True)
+        
+        # if circle4 is active this frame...
+        if circle4.status == STARTED:
+            # update params
+            pass
+        
+        # *circle5* updates
+        
+        # if circle5 is starting this frame...
+        if circle5.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+            # keep track of start time/frame for later
+            circle5.frameNStart = frameN  # exact frame index
+            circle5.tStart = t  # local t and not account for scr refresh
+            circle5.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(circle5, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'circle5.started')
+            # update status
+            circle5.status = STARTED
+            circle5.setAutoDraw(True)
+        
+        # if circle5 is active this frame...
+        if circle5.status == STARTED:
+            # update params
+            pass
+        
+        # *circle6* updates
+        
+        # if circle6 is starting this frame...
+        if circle6.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+            # keep track of start time/frame for later
+            circle6.frameNStart = frameN  # exact frame index
+            circle6.tStart = t  # local t and not account for scr refresh
+            circle6.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(circle6, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'circle6.started')
+            # update status
+            circle6.status = STARTED
+            circle6.setAutoDraw(True)
+        
+        # if circle6 is active this frame...
+        if circle6.status == STARTED:
+            # update params
+            pass
+        
+        # *circle7* updates
+        
+        # if circle7 is starting this frame...
+        if circle7.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+            # keep track of start time/frame for later
+            circle7.frameNStart = frameN  # exact frame index
+            circle7.tStart = t  # local t and not account for scr refresh
+            circle7.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(circle7, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'circle7.started')
+            # update status
+            circle7.status = STARTED
+            circle7.setAutoDraw(True)
+        
+        # if circle7 is active this frame...
+        if circle7.status == STARTED:
+            # update params
+            pass
+        
+        # *triangle1* updates
+        
+        # if triangle1 is starting this frame...
+        if triangle1.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+            # keep track of start time/frame for later
+            triangle1.frameNStart = frameN  # exact frame index
+            triangle1.tStart = t  # local t and not account for scr refresh
+            triangle1.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(triangle1, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'triangle1.started')
+            # update status
+            triangle1.status = STARTED
+            triangle1.setAutoDraw(True)
+        
+        # if triangle1 is active this frame...
+        if triangle1.status == STARTED:
+            # update params
+            pass
+        # *mouse* updates
+        
+        # if mouse is starting this frame...
+        if mouse.status == NOT_STARTED and t >= 0-frameTolerance:
+            # keep track of start time/frame for later
+            mouse.frameNStart = frameN  # exact frame index
+            mouse.tStart = t  # local t and not account for scr refresh
+            mouse.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(mouse, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.addData('mouse.started', t)
+            # update status
+            mouse.status = STARTED
+            mouse.mouseClock.reset()
+            prevButtonState = mouse.getPressed()  # if button is down already this ISN'T a new click
+        if mouse.status == STARTED:  # only update if started and not finished!
+            buttons = mouse.getPressed()
+            if buttons != prevButtonState:  # button state changed?
+                prevButtonState = buttons
+                if sum(buttons) > 0:  # state changed to a new click
+                    # check if the mouse was inside our 'clickable' objects
+                    gotValidClick = False
+                    clickableList = environmenttools.getFromNames([triangle1], namespace=locals())
+                    for obj in clickableList:
+                        # is this object clicked on?
+                        if obj.contains(mouse):
+                            gotValidClick = True
+                            mouse.clicked_name.append(obj.name)
+                    # check whether click was in correct object
+                    if gotValidClick:
+                        _corr = 0
+                        _corrAns = environmenttools.getFromNames(triangle1, namespace=locals())
+                        for obj in _corrAns:
+                            # is this object clicked on?
+                            if obj.contains(mouse):
+                                _corr = 1
+                        mouse.corr.append(_corr)
+                    if gotValidClick:  
+                        continueRoutine = False  # end routine on response
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in builder_attemptComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "builder_attempt" ---
+    for thisComponent in builder_attemptComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('builder_attempt.stopped', globalClock.getTime(format='float'))
+    # store data for thisExp (ExperimentHandler)
+    x, y = mouse.getPos()
+    buttons = mouse.getPressed()
+    if sum(buttons):
+        # check if the mouse was inside our 'clickable' objects
+        gotValidClick = False
+        clickableList = environmenttools.getFromNames([triangle1], namespace=locals())
+        for obj in clickableList:
+            # is this object clicked on?
+            if obj.contains(mouse):
+                gotValidClick = True
+                mouse.clicked_name.append(obj.name)
+    thisExp.addData('mouse.x', x)
+    thisExp.addData('mouse.y', y)
+    thisExp.addData('mouse.leftButton', buttons[0])
+    thisExp.addData('mouse.midButton', buttons[1])
+    thisExp.addData('mouse.rightButton', buttons[2])
+    thisExp.addData('mouse.corr', mouse.corr)
+    if len(mouse.clicked_name):
+        thisExp.addData('mouse.clicked_name', mouse.clicked_name[0])
+    thisExp.nextEntry()
+    # the Routine "builder_attempt" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     
     # --- Prepare to start Routine "End_Routine" ---
     continueRoutine = True
