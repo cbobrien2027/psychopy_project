@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Mon May  6 12:47:38 2024
+This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
+    on May 06, 2024, at 14:07
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ deviceManager = hardware.DeviceManager()
 # ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
-psychopyVersion = '2024.1.4'
+psychopyVersion = '2024.1.1'
 expName = 'creatingimagesNEW'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
@@ -60,15 +60,12 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = False
-_winSize = [1536, 864]
 _loggingLevel = logging.getLevel('warning')
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
     if prefs.piloting['forceWindowed']:
         _fullScr = False
-        # set window size
-        _winSize = prefs.piloting['forcedWindowSize']
     # override logging level
     _loggingLevel = logging.getLevel(
         prefs.piloting['pilotLoggingLevel']
@@ -131,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/carolineobrien/Documents/GitHub/psychopy_project/creatingimagesNEW_lastrun.py',
+        originPath='C:\\Users\\prami\\OneDrive\\Desktop\\CLPS_0950\\psychopy_project\\creatingimagesNEW_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -182,7 +179,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=0,
+            size=[1536, 864], fullscr=_fullScr, screen=0,
             winType='pyglet', allowStencil=False,
             monitor='testMonitor', color=[-1,-1,-1], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -529,63 +526,124 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "Welcome_Page" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
-    # --- Prepare to start Routine "test_trial" ---
-    continueRoutine = True
-    # update component parameters for each repeat
-    thisExp.addData('test_trial.started', globalClock.getTime(format='float'))
-    # keep track of which components have finished
-    test_trialComponents = []
-    for thisComponent in test_trialComponents:
-        thisComponent.tStart = None
-        thisComponent.tStop = None
-        thisComponent.tStartRefresh = None
-        thisComponent.tStopRefresh = None
-        if hasattr(thisComponent, 'status'):
-            thisComponent.status = NOT_STARTED
-    # reset timers
-    t = 0
-    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-    frameN = -1
+    # set up handler to look after randomisation of conditions etc
+    test_trial_before_experiment = data.TrialHandler(nReps=3.0, method='random', 
+        extraInfo=expInfo, originPath=-1,
+        trialList=data.importConditions('C:/Users/prami/OneDrive/Desktop/Conditions_Spreadsheet_for_test_trials.csv'),
+        seed=None, name='test_trial_before_experiment')
+    thisExp.addLoop(test_trial_before_experiment)  # add the loop to the experiment
+    thisTest_trial_before_experiment = test_trial_before_experiment.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisTest_trial_before_experiment.rgb)
+    if thisTest_trial_before_experiment != None:
+        for paramName in thisTest_trial_before_experiment:
+            globals()[paramName] = thisTest_trial_before_experiment[paramName]
     
-    # --- Run Routine "test_trial" ---
-    routineForceEnded = not continueRoutine
-    while continueRoutine:
-        # get current time
-        t = routineTimer.getTime()
-        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-        # update/draw components on each frame
+    for thisTest_trial_before_experiment in test_trial_before_experiment:
+        currentLoop = test_trial_before_experiment
+        thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[]
+        )
+        # abbreviate parameter names if possible (e.g. rgb = thisTest_trial_before_experiment.rgb)
+        if thisTest_trial_before_experiment != None:
+            for paramName in thisTest_trial_before_experiment:
+                globals()[paramName] = thisTest_trial_before_experiment[paramName]
         
-        # check for quit (typically the Esc key)
-        if defaultKeyboard.getKeys(keyList=["escape"]):
-            thisExp.status = FINISHED
-        if thisExp.status == FINISHED or endExpNow:
-            endExperiment(thisExp, win=win)
-            return
+        # --- Prepare to start Routine "test_trial" ---
+        continueRoutine = True
+        # update component parameters for each repeat
+        thisExp.addData('test_trial.started', globalClock.getTime(format='float'))
+        # Run 'Begin Routine' code from test_trial_code
+        # Garv's Code
         
-        # check if all components have finished
-        if not continueRoutine:  # a component has requested a forced-end of Routine
-            routineForceEnded = True
-            break
-        continueRoutine = False  # will revert to True if at least one component still running
+        fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
+        fixation_square.draw()
+        win.update()
+        core.wait (0.2)
+        circlepos = [(0,0.25), (0.1875, 0.1875), (0.25, 0), (0.1875, -0.1875), (0, -0.25), (-0.1875, -0.1875), (-0.25, 0), (-0.1875, 0.1875)]
+        mouse = event.Mouse(win = win)
+        mouse.mouseClock = core.Clock()
+        
+        def new_list(circlepos, triangle_pos):
+            if triangle_pos in ciclepos:
+                input_list.remove(triangle_pos)
+        
+         
+        for i in circlepos:
+            if pink_circle_pos == 0:
+                green_circles = visual.Polygon(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [-0.6708, 0.6708, -0.6708], fillColorSpace = 'rgb')
+            if pink_circle_pos == i:
+                pink_circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [1.0000, -1.0000, 1.0000], fillColorSpace = 'rgb')
+            
+        
+        #while triangle1.contains(mouse) == False:
+            #core.wait(1) 
+        #if triangle1.contains(mouse) == True:
+            #continueRoutine = False
+        # keep track of which components have finished
+        test_trialComponents = []
         for thisComponent in test_trialComponents:
-            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                continueRoutine = True
-                break  # at least one component has not yet finished
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
         
-        # refresh the screen
-        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-            win.flip()
+        # --- Run Routine "test_trial" ---
+        routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in test_trialComponents:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "test_trial" ---
+        for thisComponent in test_trialComponents:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        thisExp.addData('test_trial.stopped', globalClock.getTime(format='float'))
+        # the Routine "test_trial" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        thisExp.nextEntry()
+        
+        if thisSession is not None:
+            # if running in a Session with a Liaison client, send data up to now
+            thisSession.sendExperimentData()
+    # completed 3.0 repeats of 'test_trial_before_experiment'
     
-    # --- Ending Routine "test_trial" ---
-    for thisComponent in test_trialComponents:
-        if hasattr(thisComponent, "setAutoDraw"):
-            thisComponent.setAutoDraw(False)
-    thisExp.addData('test_trial.stopped', globalClock.getTime(format='float'))
-    thisExp.nextEntry()
-    # the Routine "test_trial" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
     trials = data.TrialHandler(nReps=3.0, method='random', 
