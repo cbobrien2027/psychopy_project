@@ -2,7 +2,7 @@
  * Creatingimagesnew *
  **************************/
 
-import { core, data, sound, util, visual, hardware } from './lib/psychojs-2024.1.1.js';
+import { core, data, sound, util, visual, hardware } from './lib/psychojs-2024.1.4.js';
 const { PsychoJS } = core;
 const { TrialHandler, MultiStairHandler } = data;
 const { Scheduler } = util;
@@ -81,7 +81,7 @@ async function updateInfo() {
   currentLoop = psychoJS.experiment;  // right now there are no loops
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2024.1.1';
+  expInfo['psychopyVersion'] = '2024.1.4';
   expInfo['OS'] = window.navigator.platform;
 
 
@@ -108,17 +108,7 @@ async function updateInfo() {
 var Welcome_PageClock;
 var textWelcomePage;
 var key_resp;
-var trialClock;
-var circle1;
-var circle2;
-var circle3;
-var circle4;
-var circle5;
-var circle6;
-var circle7;
-var triangle1;
-var fixation;
-var mouse;
+var code_attemptClock;
 var End_RoutineClock;
 var End_Text;
 var key_resp_2;
@@ -141,120 +131,8 @@ async function experimentInit() {
   
   key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Initialize components for Routine "trial"
-  trialClock = new util.Clock();
-  circle1 = new visual.Polygon({
-    win: psychoJS.window, name: 'circle1', 
-    edges: 100, size:[0.1, 0.1],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
-    lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -1, interpolate: true,
-  });
-  
-  circle2 = new visual.Polygon({
-    win: psychoJS.window, name: 'circle2', 
-    edges: 100, size:[0.1, 0.1],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
-    lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -2, interpolate: true,
-  });
-  
-  circle3 = new visual.Polygon({
-    win: psychoJS.window, name: 'circle3', 
-    edges: 100, size:[0.1, 0.1],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
-    lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -3, interpolate: true,
-  });
-  
-  circle4 = new visual.Polygon({
-    win: psychoJS.window, name: 'circle4', 
-    edges: 100, size:[0.1, 0.1],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
-    lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -4, interpolate: true,
-  });
-  
-  circle5 = new visual.Polygon({
-    win: psychoJS.window, name: 'circle5', 
-    edges: 100, size:[0.1, 0.1],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
-    lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -5, interpolate: true,
-  });
-  
-  circle6 = new visual.Polygon({
-    win: psychoJS.window, name: 'circle6', 
-    edges: 100, size:[0.1, 0.1],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
-    lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -6, interpolate: true,
-  });
-  
-  circle7 = new visual.Polygon({
-    win: psychoJS.window, name: 'circle7', 
-    edges: 100, size:[0.1, 0.1],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
-    lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -7, interpolate: true,
-  });
-  
-  triangle1 = new visual.ShapeStim ({
-    win: psychoJS.window, name: 'triangle1', 
-    vertices: [[-[0.1, 0.1][0]/2.0, -[0.1, 0.1][1]/2.0], [+[0.1, 0.1][0]/2.0, -[0.1, 0.1][1]/2.0], [0, [0.1, 0.1][1]/2.0]],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
-    lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -8, interpolate: true,
-  });
-  
-  fixation = new visual.ShapeStim ({
-    win: psychoJS.window, name: 'fixation', 
-    vertices: 'cross', size:[0.05, 0.05],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
-    lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -9, interpolate: true,
-  });
-  
-  mouse = new core.Mouse({
-    win: psychoJS.window,
-  });
-  mouse.mouseClock = new util.Clock();
+  // Initialize components for Routine "code_attempt"
+  code_attemptClock = new util.Clock();
   // Initialize components for Routine "End_Routine"
   End_RoutineClock = new util.Clock();
   End_Text = new visual.TextStim({
@@ -433,9 +311,9 @@ function trialsLoopBegin(trialsLoopScheduler, snapshot) {
     for (const thisTrial of trials) {
       snapshot = trials.getSnapshot();
       trialsLoopScheduler.add(importConditions(snapshot));
-      trialsLoopScheduler.add(trialRoutineBegin(snapshot));
-      trialsLoopScheduler.add(trialRoutineEachFrame());
-      trialsLoopScheduler.add(trialRoutineEnd(snapshot));
+      trialsLoopScheduler.add(code_attemptRoutineBegin(snapshot));
+      trialsLoopScheduler.add(code_attemptRoutineEachFrame());
+      trialsLoopScheduler.add(code_attemptRoutineEnd(snapshot));
       trialsLoopScheduler.add(trialsLoopEndIteration(trialsLoopScheduler, snapshot));
     }
     
@@ -476,63 +354,24 @@ function trialsLoopEndIteration(scheduler, snapshot) {
 }
 
 
-var gotValidClick;
-var trialComponents;
-function trialRoutineBegin(snapshot) {
+var code_attemptComponents;
+function code_attemptRoutineBegin(snapshot) {
   return async function () {
     TrialHandler.fromSnapshot(snapshot); // ensure that .thisN vals are up to date
     
-    //--- Prepare to start Routine 'trial' ---
+    //--- Prepare to start Routine 'code_attempt' ---
     t = 0;
-    trialClock.reset(); // clock
+    code_attemptClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
     // update component parameters for each repeat
-    psychoJS.experiment.addData('trial.started', globalClock.getTime());
-    // Run 'Begin Routine' code from code
-    /* Syntax Error: Fix Python code */
-    circle1.setFillColor(new util.Color(circle1_color));
-    circle1.setPos(circle1_pos);
-    circle1.setLineColor(new util.Color(circle1_color));
-    circle2.setFillColor(new util.Color(circle2_color));
-    circle2.setPos(circle2_pos);
-    circle2.setLineColor(new util.Color(circle2_color));
-    circle3.setFillColor(new util.Color(circle3_color));
-    circle3.setPos(circle3_pos);
-    circle3.setLineColor(new util.Color(circle3_color));
-    circle4.setFillColor(new util.Color(circle4_color));
-    circle4.setPos(circle4_pos);
-    circle4.setLineColor(new util.Color(circle4_color));
-    circle5.setFillColor(new util.Color(circle5_color));
-    circle5.setPos(circle5_pos);
-    circle5.setLineColor(new util.Color(circle5_color));
-    circle6.setFillColor(new util.Color(circle6_color));
-    circle6.setPos(circle6_pos);
-    circle6.setLineColor(new util.Color(circle6_color));
-    circle7.setFillColor(new util.Color(circle7_color));
-    circle7.setPos(circle7_pos);
-    circle7.setLineColor(new util.Color(circle7_color));
-    triangle1.setFillColor(new util.Color(triangle1_color));
-    triangle1.setPos(triangle_pos);
-    triangle1.setLineColor(new util.Color(triangle1_color));
-    // setup some python lists for storing info about the mouse
-    mouse.corr = [];
-    mouse.clicked_name = [];
-    gotValidClick = false; // until a click is received
+    psychoJS.experiment.addData('code_attempt.started', globalClock.getTime());
+    // Run 'Begin Routine' code from code_2
+     
     // keep track of which components have finished
-    trialComponents = [];
-    trialComponents.push(circle1);
-    trialComponents.push(circle2);
-    trialComponents.push(circle3);
-    trialComponents.push(circle4);
-    trialComponents.push(circle5);
-    trialComponents.push(circle6);
-    trialComponents.push(circle7);
-    trialComponents.push(triangle1);
-    trialComponents.push(fixation);
-    trialComponents.push(mouse);
+    code_attemptComponents = [];
     
-    for (const thisComponent of trialComponents)
+    for (const thisComponent of code_attemptComponents)
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
     return Scheduler.Event.NEXT;
@@ -540,153 +379,13 @@ function trialRoutineBegin(snapshot) {
 }
 
 
-var frameRemains;
-var prevButtonState;
-var _mouseButtons;
-var corr;
-var corrAns;
-function trialRoutineEachFrame() {
+function code_attemptRoutineEachFrame() {
   return async function () {
-    //--- Loop for each frame of Routine 'trial' ---
+    //--- Loop for each frame of Routine 'code_attempt' ---
     // get current time
-    t = trialClock.getTime();
+    t = code_attemptClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *circle1* updates
-    if (t >= 1 && circle1.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      circle1.tStart = t;  // (not accounting for frame time here)
-      circle1.frameNStart = frameN;  // exact frame index
-      
-      circle1.setAutoDraw(true);
-    }
-    
-    
-    // *circle2* updates
-    if (t >= 1.0 && circle2.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      circle2.tStart = t;  // (not accounting for frame time here)
-      circle2.frameNStart = frameN;  // exact frame index
-      
-      circle2.setAutoDraw(true);
-    }
-    
-    
-    // *circle3* updates
-    if (t >= 1.0 && circle3.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      circle3.tStart = t;  // (not accounting for frame time here)
-      circle3.frameNStart = frameN;  // exact frame index
-      
-      circle3.setAutoDraw(true);
-    }
-    
-    
-    // *circle4* updates
-    if (t >= 1.0 && circle4.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      circle4.tStart = t;  // (not accounting for frame time here)
-      circle4.frameNStart = frameN;  // exact frame index
-      
-      circle4.setAutoDraw(true);
-    }
-    
-    
-    // *circle5* updates
-    if (t >= 1.0 && circle5.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      circle5.tStart = t;  // (not accounting for frame time here)
-      circle5.frameNStart = frameN;  // exact frame index
-      
-      circle5.setAutoDraw(true);
-    }
-    
-    
-    // *circle6* updates
-    if (t >= 1.0 && circle6.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      circle6.tStart = t;  // (not accounting for frame time here)
-      circle6.frameNStart = frameN;  // exact frame index
-      
-      circle6.setAutoDraw(true);
-    }
-    
-    
-    // *circle7* updates
-    if (t >= 1.0 && circle7.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      circle7.tStart = t;  // (not accounting for frame time here)
-      circle7.frameNStart = frameN;  // exact frame index
-      
-      circle7.setAutoDraw(true);
-    }
-    
-    
-    // *triangle1* updates
-    if (t >= 1.0 && triangle1.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      triangle1.tStart = t;  // (not accounting for frame time here)
-      triangle1.frameNStart = frameN;  // exact frame index
-      
-      triangle1.setAutoDraw(true);
-    }
-    
-    
-    // *fixation* updates
-    if (t >= 0.0 && fixation.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      fixation.tStart = t;  // (not accounting for frame time here)
-      fixation.frameNStart = frameN;  // exact frame index
-      
-      fixation.setAutoDraw(true);
-    }
-    
-    frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (fixation.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      fixation.setAutoDraw(false);
-    }
-    
-    // *mouse* updates
-    if (t >= 0 && mouse.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      mouse.tStart = t;  // (not accounting for frame time here)
-      mouse.frameNStart = frameN;  // exact frame index
-      
-      mouse.status = PsychoJS.Status.STARTED;
-      mouse.mouseClock.reset();
-      prevButtonState = mouse.getPressed();  // if button is down already this ISN'T a new click
-      }
-    if (mouse.status === PsychoJS.Status.STARTED) {  // only update if started and not finished!
-      _mouseButtons = mouse.getPressed();
-      if (!_mouseButtons.every( (e,i,) => (e == prevButtonState[i]) )) { // button state changed?
-        prevButtonState = _mouseButtons;
-        if (_mouseButtons.reduce( (e, acc) => (e+acc) ) > 0) { // state changed to a new click
-          // check if the mouse was inside our 'clickable' objects
-          gotValidClick = false;
-          for (const obj of [[triangle1]]) {
-            if (obj.contains(mouse)) {
-              gotValidClick = true;
-              mouse.clicked_name.push(obj.name)
-            }
-          }
-          // check whether click was in correct object
-          if (gotValidClick) {
-              corr = 0;
-              corrAns = triangle1;
-              for (let obj of [corrAns]) {
-                  if (obj.contains(mouse)) {
-                      corr = 1;
-                  };
-              };
-              mouse.corr.push(corr);
-          };
-          if (gotValidClick === true) { // end routine on response
-            continueRoutine = false;
-          }
-        }
-      }
-    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -698,7 +397,7 @@ function trialRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of trialComponents)
+    for (const thisComponent of code_attemptComponents)
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
         break;
@@ -714,28 +413,16 @@ function trialRoutineEachFrame() {
 }
 
 
-var _mouseXYs;
-function trialRoutineEnd(snapshot) {
+function code_attemptRoutineEnd(snapshot) {
   return async function () {
-    //--- Ending Routine 'trial' ---
-    for (const thisComponent of trialComponents) {
+    //--- Ending Routine 'code_attempt' ---
+    for (const thisComponent of code_attemptComponents) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('trial.stopped', globalClock.getTime());
-    // store data for psychoJS.experiment (ExperimentHandler)
-    _mouseXYs = mouse.getPos();
-    _mouseButtons = mouse.getPressed();
-    psychoJS.experiment.addData('mouse.x', _mouseXYs[0]);
-    psychoJS.experiment.addData('mouse.y', _mouseXYs[1]);
-    psychoJS.experiment.addData('mouse.leftButton', _mouseButtons[0]);
-    psychoJS.experiment.addData('mouse.midButton', _mouseButtons[1]);
-    psychoJS.experiment.addData('mouse.rightButton', _mouseButtons[2]);
-    psychoJS.experiment.addData('mouse.corr', mouse.corr);
-    if (mouse.clicked_name.length > 0) {
-      psychoJS.experiment.addData('mouse.clicked_name', mouse.clicked_name[0]);}
-    // the Routine "trial" was not non-slip safe, so reset the non-slip timer
+    psychoJS.experiment.addData('code_attempt.stopped', globalClock.getTime());
+    // the Routine "code_attempt" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
     // Routines running outside a loop should always advance the datafile row

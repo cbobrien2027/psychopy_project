@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Mon May  6 00:17:54 2024
+    on Mon May  6 12:47:38 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -371,6 +371,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     key_resp = keyboard.Keyboard(deviceName='key_resp')
     
+    # --- Initialize components for Routine "test_trial" ---
+    
     # --- Initialize components for Routine "code_attempt" ---
     
     # --- Initialize components for Routine "End_Routine" ---
@@ -527,8 +529,66 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "Welcome_Page" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
+    # --- Prepare to start Routine "test_trial" ---
+    continueRoutine = True
+    # update component parameters for each repeat
+    thisExp.addData('test_trial.started', globalClock.getTime(format='float'))
+    # keep track of which components have finished
+    test_trialComponents = []
+    for thisComponent in test_trialComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "test_trial" ---
+    routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in test_trialComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "test_trial" ---
+    for thisComponent in test_trialComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    thisExp.addData('test_trial.stopped', globalClock.getTime(format='float'))
+    thisExp.nextEntry()
+    # the Routine "test_trial" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=1.0, method='random', 
+    trials = data.TrialHandler(nReps=3.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=data.importConditions('Conditions Spreadsheet-2.xlsx'),
         seed=None, name='trials')
@@ -560,7 +620,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('code_attempt.started', globalClock.getTime(format='float'))
         # Run 'Begin Routine' code from code_2
-        #Caroline coded lines 1-5 and lines 13-93. 25 hours.
+        #Caroline coded lines 1-8 and lines 13-93. 25 hours.
         fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
         fixation_square.draw()
         win.update()
@@ -713,7 +773,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 1.0 repeats of 'trials'
+    # completed 3.0 repeats of 'trials'
     
     
     # --- Prepare to start Routine "End_Routine" ---
