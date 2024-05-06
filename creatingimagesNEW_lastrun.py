@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Sun May  5 18:14:06 2024
+    on Sun May  5 20:57:47 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -613,9 +613,86 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('fixation_2.started', globalClock.getTime(format='float'))
         # Run 'Begin Routine' code from code_2
-        test = visual.Polygon (win = win, edges = 4, radius = 0.5, pos = (0,0), size = 0.2, fillColor = [1, 1, 1], fillColorSpace = 'rgb')
-        test.draw()
+        fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.1, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
+        fixation_square.draw()
+        win.update()
+        core.wait (0.2)
         
+        #Sets circle1 position.
+        if triangle_pos != (0, 0.25):
+            circle1_pos = (0, 0.25)
+        else:
+            circle1_pos = (0.1875, 0.1875)
+           
+        #Sets circle2 position.
+        if triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):
+            circle2_pos = (0.1875, 0.1875)
+        else:
+            circle2_pos = (0.25, 0)
+        
+        #Sets circle3 position.
+        if triangle_pos != (0.25, 0) and triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):
+            circle3_pos = (0.25, 0)
+        else:
+            circle3_pos = (0.1875, -0.1875)
+        
+        #Sets circle4 position.
+        if triangle_pos == (0, -0.25) or triangle_pos == (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
+            circle4_pos = (0.1875, -0.1875)
+        else:
+            circle4_pos = (0, -0.25)
+            
+        #Sets circle5 position.
+        if triangle_pos== (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
+            circle5_pos = (0, -0.25)
+        else:
+            circle5_pos = (-0.1875, -0.1875)
+            
+        #Sets circle6 position.
+        if triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):
+            circle6_pos = (-0.1875, -0.1875)
+        else:
+            circle6_pos = (-0.25, 0)
+            
+        #Sets circle7 position.
+        if triangle_pos == (-0.1875, 0.1875):
+            circle7_pos = (-0.25, 0)
+        else:
+            circle7_pos = (-0.1875, 0.1875)
+        
+        #Sets the triangle color.
+        if triangle_color == 'g':
+            triangle1_color = [-0.6078, 0.6708, -0.6708]
+        else:
+            triangle1_color = [1.0000, -1.0000, 1.0000]
+            
+        #Sets the circle colors - all green except if the position matches pink_circle_pos.
+        #Then it is set to pink.
+        
+        circle1_color = []
+        circle2_color = []
+        circle3_color = []
+        circle4_color = []
+        circle5_color = []
+        circle6_color = []
+        circle7_color = []
+        
+        circle_positions = [circle1_pos, circle2_pos, circle3_pos, circle4_pos, circle5_pos, circle6_pos, circle7_pos]
+        circle_colors = [circle1_color, circle2_color, circle3_color, circle4_color, circle5_color, circle6_color, circle7_color]
+        
+        for ii in range (len (circle_colors)):
+            if circle_positions [ii] == pink_circle_pos:
+                circle_colors[ii] = [1.0000, -1.0000, 1.0000]
+            else:
+                circle_colors[ii] = [-0.6708, 0.6708, -0.6708]
+        
+        for ii in range (len(circle_colors)):
+            circles = visual.Circle (win = win, edges = 'circle', pos = circle_positions[ii], size = 0.1, fillColor = circle_colors[ii], fillColorSpace = 'rgb')
+            circles.draw()
+        triangle1 = visual.Polygon (win = win, edges = 3, pos = triangle_pos, size = 0.125, fillColor = triangle1_color, lineColor = triangle1_color, fillColorSpace = 'rgb', lineColorSpace = 'rgb')
+        triangle1.draw()
+        win.update()
+        core.wait (2.0)
         # keep track of which components have finished
         fixation_2Components = []
         for thisComponent in fixation_2Components:
@@ -674,9 +751,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('trial.started', globalClock.getTime(format='float'))
         # Run 'Begin Routine' code from code
-        #Garv coded.
-        mouse.setPos(0)
-        
         #Caroline coded lines 6-90.
         #Sets circle1 position.
         if triangle_pos != (0, 0.25):
@@ -762,7 +836,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             circle7_color = [1.0000, -1.0000, 1.0000]
         else:
             circle7_color = [-0.6078, 0.6708, -0.6708]
-                
+        
+        #Garv coded.
+        mouse.setPos(0)
         circle1.setFillColor(circle1_color)
         circle1.setPos(circle1_pos)
         circle1.setLineColor(circle1_color)
