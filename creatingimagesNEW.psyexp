@@ -571,8 +571,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="fixation_square = new visual.Polygon({&quot;win&quot;: psychoJS.window, &quot;edges&quot;: 4, &quot;radius&quot;: 0.1, &quot;pos&quot;: [0, 0], &quot;size&quot;: 0.3, &quot;fillColor&quot;: [1, 1, 1], &quot;fillColorSpace&quot;: &quot;rgb&quot;, &quot;ori&quot;: 90.0});&amp;#10;fixation_square.draw();&amp;#10;psychoJS.window.update();&amp;#10;circle1_pos = [];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)&amp;#10;fixation_square.draw()&amp;#10;win.update()&amp;#10;&amp;#10;circle1_pos = []" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -587,7 +587,19 @@
   </Routines>
   <Flow>
     <Routine name="Welcome_Page"/>
+    <LoopInitiator loopType="TrialHandler" name="test_trial_before_experiment">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('triangle_pos', '(0, 0.25)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.1875, 0.1875)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.25, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.1875, -0.1875)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(-0.1875, -0.1875)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(-0.25, 0)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.25, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', '(-0.1875, -0.1875)')]), OrderedDict([('triangle_pos', '(-0.1875, 0.1875)'), ('triangle_color', 'g'), ('pink_circle_pos', '(-0.25, 0)')]), OrderedDict([('triangle_pos', '(-0.25, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', '(0.25, 0)')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="C:/Users/prami/OneDrive/Desktop/Conditions_Spreadsheet_for_test_trials.csv" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="3" valType="num"/>
+      <Param name="name" updates="None" val="test_trial_before_experiment" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
     <Routine name="test_trial"/>
+    <LoopTerminator name="test_trial_before_experiment"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'triangle_pos': (0, 0.25), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.1875, 0.1875), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.25, 0), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.1875, -0.1875), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0, -0.25), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.1875, -0.1875), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.25, 0), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.1875, 0.1875), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0, 0.25), 'triangle_color': 'g', 'pink_circle_pos': (-0.1875, -0.1875)}, {'triangle_pos': (0.1875, 0.1875), 'triangle_color': 'g', 'pink_circle_pos': (0, -0.25)}, {'triangle_pos': (0.25, 0), 'triangle_color': 'g', 'pink_circle_pos': (0, 0.25)}, {'triangle_pos': (0.1875, -0.1875), 'triangle_color': 'g', 'pink_circle_pos': (0.25, 0)}, {'triangle_pos': (0, -0.25), 'triangle_color': 'g', 'pink_circle_pos': (-0.1875, 0.1875)}, {'triangle_pos': (-0.1875, -0.1875), 'triangle_color': 'g', 'pink_circle_pos': (-0.25, 0)}, {'triangle_pos': (-0.25, 0), 'triangle_color': 'g', 'pink_circle_pos': (0.1875, -0.1875)}, {'triangle_pos': (-0.1875, 0.1875), 'triangle_color': 'g', 'pink_circle_pos': (0.1875, 0.1875)}, {'triangle_pos': (0, 0.25), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.1875, 0.1875), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.25, 0), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.1875, -0.1875), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (0, -0.25), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.1875, -0.1875), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.25, 0), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.1875, 0.1875), 'triangle_color': 'p', 'pink_circle_pos': 0.0}]" valType="str"/>
