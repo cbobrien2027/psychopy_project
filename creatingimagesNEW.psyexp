@@ -226,7 +226,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val=" " valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="#Caroline coded lines 1-8 and lines 13-93. 25 hours.&amp;#10;fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)&amp;#10;fixation_square.draw()&amp;#10;win.update()&amp;#10;core.wait (0.2)&amp;#10;&amp;#10;mouse = event.Mouse(win = win)&amp;#10;mouse.mouseClock = core.Clock()&amp;#10;&amp;#10;#Garv coded.&amp;#10;mouse.setPos(0)&amp;#10;&amp;#10;#Sets circle1 position.&amp;#10;if triangle_pos != (0, 0.25):&amp;#10;    circle1_pos = (0, 0.25)&amp;#10;else:&amp;#10;    circle1_pos = (0.1875, 0.1875)&amp;#10;   &amp;#10;#Sets circle2 position.&amp;#10;if triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):&amp;#10;    circle2_pos = (0.1875, 0.1875)&amp;#10;else:&amp;#10;    circle2_pos = (0.25, 0)&amp;#10;&amp;#10;#Sets circle3 position.&amp;#10;if triangle_pos != (0.25, 0) and triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):&amp;#10;    circle3_pos = (0.25, 0)&amp;#10;else:&amp;#10;    circle3_pos = (0.1875, -0.1875)&amp;#10;&amp;#10;#Sets circle4 position.&amp;#10;if triangle_pos == (0, -0.25) or triangle_pos == (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):&amp;#10;    circle4_pos = (0.1875, -0.1875)&amp;#10;else:&amp;#10;    circle4_pos = (0, -0.25)&amp;#10;    &amp;#10;#Sets circle5 position.&amp;#10;if triangle_pos== (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):&amp;#10;    circle5_pos = (0, -0.25)&amp;#10;else:&amp;#10;    circle5_pos = (-0.1875, -0.1875)&amp;#10;    &amp;#10;#Sets circle6 position.&amp;#10;if triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):&amp;#10;    circle6_pos = (-0.1875, -0.1875)&amp;#10;else:&amp;#10;    circle6_pos = (-0.25, 0)&amp;#10;    &amp;#10;#Sets circle7 position.&amp;#10;if triangle_pos == (-0.1875, 0.1875):&amp;#10;    circle7_pos = (-0.25, 0)&amp;#10;else:&amp;#10;    circle7_pos = (-0.1875, 0.1875)&amp;#10;&amp;#10;#Sets the triangle color.&amp;#10;if triangle_color == 'g':&amp;#10;    triangle1_color = [-0.6078, 0.6708, -0.6708]&amp;#10;else:&amp;#10;    triangle1_color = [1.0000, -1.0000, 1.0000]&amp;#10;    &amp;#10;#Sets the circle colors - all green except if the position matches pink_circle_pos.&amp;#10;#Then it is set to pink.&amp;#10;&amp;#10;circle1_color = []&amp;#10;circle2_color = []&amp;#10;circle3_color = []&amp;#10;circle4_color = []&amp;#10;circle5_color = []&amp;#10;circle6_color = []&amp;#10;circle7_color = []&amp;#10;&amp;#10;circle_positions = [circle1_pos, circle2_pos, circle3_pos, circle4_pos, circle5_pos, circle6_pos, circle7_pos]&amp;#10;circle_colors = [circle1_color, circle2_color, circle3_color, circle4_color, circle5_color, circle6_color, circle7_color]&amp;#10;&amp;#10;for ii in range (len (circle_colors)):&amp;#10;    if circle_positions [ii] == pink_circle_pos:&amp;#10;        circle_colors[ii] = [1.0000, -1.0000, 1.0000]&amp;#10;    else:&amp;#10;        circle_colors[ii] = [-0.6708, 0.6708, -0.6708]&amp;#10;&amp;#10;for ii in range (len(circle_colors)):&amp;#10;    circles = visual.Circle (win = win, edges = 'circle', pos = circle_positions[ii], size = 0.1, fillColor = circle_colors[ii], fillColorSpace = 'rgb')&amp;#10;    circles.draw()&amp;#10;triangle1 = visual.Polygon (win = win, edges = 3, pos = triangle_pos, size = 0.125, fillColor = triangle1_color, lineColor = triangle1_color, fillColorSpace = 'rgb', lineColorSpace = 'rgb')&amp;#10;triangle1.draw()&amp;#10;fixation_square.draw()&amp;#10;win.update()&amp;#10;            &amp;#10;while triangle1.contains(mouse) == False:&amp;#10;    core.wait (1)&amp;#10;    &amp;#10;if triangle1.contains(mouse) == True:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="#Caroline coded lines 1-8 and lines 13-93. 25 hours.&amp;#10;fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)&amp;#10;fixation_square.draw()&amp;#10;win.update()&amp;#10;core.wait (0.2) &amp;#10;&amp;#10;mouse = event.Mouse(win = win)&amp;#10;mouse.mouseClock = core.Clock()&amp;#10;&amp;#10;#Garv coded.&amp;#10;mouse.setPos(0)&amp;#10;&amp;#10;#Sets circle1 position.&amp;#10;&amp;#10;if triangle_pos != (0, 0.25):&amp;#10;    circle1_pos = (0, 0.25)&amp;#10;else:&amp;#10;    circle1_pos = (0.1875, 0.1875)&amp;#10;   &amp;#10;#Sets circle2 position.&amp;#10;if triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):&amp;#10;    circle2_pos = (0.1875, 0.1875)&amp;#10;else:&amp;#10;    circle2_pos = (0.25, 0)&amp;#10;&amp;#10;#Sets circle3 position.&amp;#10;if triangle_pos != (0.25, 0) and triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):&amp;#10;    circle3_pos = (0.25, 0)&amp;#10;else:&amp;#10;    circle3_pos = (0.1875, -0.1875)&amp;#10;&amp;#10;#Sets circle4 position.&amp;#10;if triangle_pos == (0, -0.25) or triangle_pos == (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):&amp;#10;    circle4_pos = (0.1875, -0.1875)&amp;#10;else:&amp;#10;    circle4_pos = (0, -0.25)&amp;#10;    &amp;#10;#Sets circle5 position.&amp;#10;if triangle_pos== (-0.1875, -0.1875) or triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):&amp;#10;    circle5_pos = (0, -0.25)&amp;#10;else:&amp;#10;    circle5_pos = (-0.1875, -0.1875)&amp;#10;    &amp;#10;#Sets circle6 position.&amp;#10;if triangle_pos == (-0.25, 0) or triangle_pos == (-0.1875, 0.1875):&amp;#10;    circle6_pos = (-0.1875, -0.1875)&amp;#10;else:&amp;#10;    circle6_pos = (-0.25, 0)&amp;#10;    &amp;#10;#Sets circle7 position.&amp;#10;if triangle_pos == (-0.1875, 0.1875):&amp;#10;    circle7_pos = (-0.25, 0)&amp;#10;else:&amp;#10;    circle7_pos = (-0.1875, 0.1875)&amp;#10;&amp;#10;#Sets the triangle color.&amp;#10;if triangle_color == 'g':&amp;#10;    triangle1_color = [-0.6078, 0.6708, -0.6708]&amp;#10;else:&amp;#10;    triangle1_color = [1.0000, -1.0000, 1.0000]&amp;#10;    &amp;#10;#Sets the circle colors - all green except if the position matches pink_circle_pos.&amp;#10;#Then it is set to pink.&amp;#10;&amp;#10;circle1_color = []&amp;#10;circle2_color = []&amp;#10;circle3_color = []&amp;#10;circle4_color = []&amp;#10;circle5_color = []&amp;#10;circle6_color = []&amp;#10;circle7_color = []&amp;#10;&amp;#10;circle_positions = [circle1_pos, circle2_pos, circle3_pos, circle4_pos, circle5_pos, circle6_pos, circle7_pos]&amp;#10;circle_colors = [circle1_color, circle2_color, circle3_color, circle4_color, circle5_color, circle6_color, circle7_color]&amp;#10;&amp;#10;for ii in range (len (circle_colors)):&amp;#10;    if circle_positions [ii] == pink_circle_pos:&amp;#10;        circle_colors[ii] = [1.0000, -1.0000, 1.0000]&amp;#10;    else:&amp;#10;        circle_colors[ii] = [-0.6708, 0.6708, -0.6708]&amp;#10;&amp;#10;for ii in range (len(circle_colors)):&amp;#10;    circles = visual.Circle (win = win, edges = 'circle', pos = circle_positions[ii], size = 0.1, fillColor = circle_colors[ii], fillColorSpace = 'rgb')&amp;#10;    circles.draw()&amp;#10;triangle1 = visual.Polygon (win = win, edges = 3, pos = triangle_pos, size = 0.125, fillColor = triangle1_color, lineColor = triangle1_color, fillColorSpace = 'rgb', lineColorSpace = 'rgb')&amp;#10;triangle1.draw()&amp;#10;fixation_square.draw()&amp;#10;win.update()&amp;#10;            &amp;#10;while triangle1.contains(mouse) == False:&amp;#10;    core.wait(0.1) # I changed the core wait time to be lower so that the delay is lower. &amp;#10;    &amp;#10;if triangle1.contains(mouse) == True:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -571,8 +571,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;fixation_square = new visual.Polygon({&quot;win&quot;: psychoJS.window, &quot;edges&quot;: 4, &quot;radius&quot;: 0.1, &quot;pos&quot;: [0, 0], &quot;size&quot;: 0.3, &quot;fillColor&quot;: [1, 1, 1], &quot;fillColorSpace&quot;: &quot;rgb&quot;, &quot;ori&quot;: 90.0});&amp;#10;fixation_square.draw();&amp;#10;psychoJS.window.update();&amp;#10;core.wait(0.2);&amp;#10;circlepos = [[0, 0.25], [0.1875, 0.1875], [0.25, 0], [0.1875, (- 0.1875)], [0, (- 0.25)], [(- 0.1875), (- 0.1875)], [(- 0.25), 0], [(- 0.1875), 0.1875]];&amp;#10;mouse = new psychoJS.eventManager.Mouse({&quot;win&quot;: psychoJS.window});&amp;#10;mouse.mouseClock = new util.Clock();&amp;#10;function new_list(circlepos, triangle_pos) {&amp;#10;    if (_pj.in_es6(triangle_pos, ciclepos)) {&amp;#10;        input_list.remove(triangle_pos);&amp;#10;    }&amp;#10;}&amp;#10;for (var i, _pj_c = 0, _pj_a = circlepos, _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;    i = _pj_a[_pj_c];&amp;#10;    if ((pink_circle_pos === 0)) {&amp;#10;        green_circles = new visual.Polygon({&quot;win&quot;: psychoJS.window, &quot;edges&quot;: &quot;circle&quot;, &quot;pos&quot;: i, &quot;size&quot;: 0.1, &quot;fillColor&quot;: [(- 0.6708), 0.6708, (- 0.6708)], &quot;fillColorSpace&quot;: &quot;rgb&quot;});&amp;#10;    }&amp;#10;    if ((pink_circle_pos === i)) {&amp;#10;        pink_circle = new visual.Circle({&quot;win&quot;: psychoJS.window, &quot;edges&quot;: &quot;circle&quot;, &quot;pos&quot;: i, &quot;size&quot;: 0.1, &quot;fillColor&quot;: [1.0, (- 1.0), 1.0], &quot;fillColorSpace&quot;: &quot;rgb&quot;});&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# Garv's Code&amp;#10;&amp;#10;fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)&amp;#10;fixation_square.draw()&amp;#10;win.update()&amp;#10;core.wait (0.2)&amp;#10;circlepos = [(0,0.25), (0.1875, 0.1875), (0.25, 0), (0.1875, -0.1875), (0, -0.25), (-0.1875, -0.1875), (-0.25, 0), (-0.1875, 0.1875)]&amp;#10;mouse = event.Mouse(win = win)&amp;#10;mouse.mouseClock = core.Clock()&amp;#10;&amp;#10;def new_list(circlepos, triangle_pos):&amp;#10;    if triangle_pos in ciclepos:&amp;#10;        input_list.remove(triangle_pos)&amp;#10;&amp;#10; &amp;#10;for i in circlepos:&amp;#10;    if pink_circle_pos == 0:&amp;#10;        green_circles = visual.Polygon(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [-0.6708, 0.6708, -0.6708], fillColorSpace = 'rgb')&amp;#10;    if pink_circle_pos == i:&amp;#10;        pink_circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [1.0000, -1.0000, 1.0000], fillColorSpace = 'rgb')&amp;#10;    &amp;#10;&amp;#10;#while triangle1.contains(mouse) == False:&amp;#10;    #core.wait(1) &amp;#10;#if triangle1.contains(mouse) == True:&amp;#10;    #continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="import * as ast from 'ast';&amp;#10;fixation_square = new visual.Polygon({&quot;win&quot;: psychoJS.window, &quot;edges&quot;: 4, &quot;radius&quot;: 0.1, &quot;pos&quot;: [0, 0], &quot;size&quot;: 0.3, &quot;fillColor&quot;: [1, 1, 1], &quot;fillColorSpace&quot;: &quot;rgb&quot;, &quot;ori&quot;: 90.0});&amp;#10;fixation_square.draw();&amp;#10;psychoJS.window.update();&amp;#10;core.wait(0.2);&amp;#10;mouse = new psychoJS.eventManager.Mouse({&quot;win&quot;: psychoJS.window});&amp;#10;mouse.mouseClock = new util.Clock();&amp;#10;mouse.setPos(0);&amp;#10;circlepos = [[0, 0.25], [0.1875, 0.1875], [0.25, 0], [0.1875, (- 0.1875)], [0, (- 0.25)], [(- 0.1875), (- 0.1875)], [(- 0.25), 0], [(- 0.1875), 0.1875]];&amp;#10;triangle_pos_tuple = tuple(ast.literal_eval(triangle_pos));&amp;#10;if ((pink_circle_pos === 0)) {&amp;#10;    pink_circle_pos_tuple = 0;&amp;#10;} else {&amp;#10;    pink_circle_pos_tuple = tuple(ast.literal_eval(pink_circle_pos));&amp;#10;}&amp;#10;circlepos.remove(triangle_pos_tuple);&amp;#10;if ((triangle_color === &quot;g&quot;)) {&amp;#10;    triangle1 = new visual.Polygon({&quot;win&quot;: psychoJS.window, &quot;edges&quot;: 3, &quot;pos&quot;: triangle_pos_tuple, &quot;size&quot;: 0.125, &quot;fillColor&quot;: [(- 0.6708), 0.6708, (- 0.6708)], &quot;lineColor&quot;: [(- 0.6708), 0.6708, (- 0.6708)], &quot;fillColorSpace&quot;: &quot;rgb&quot;, &quot;lineColorSpace&quot;: &quot;rgb&quot;});&amp;#10;} else {&amp;#10;    triangle1 = new visual.Polygon({&quot;win&quot;: psychoJS.window, &quot;edges&quot;: 3, &quot;pos&quot;: triangle_pos_tuple, &quot;size&quot;: 0.125, &quot;fillColor&quot;: [1.0, (- 1.0), 1.0], &quot;lineColor&quot;: [1.0, (- 1.0), 1.0], &quot;fillColorSpace&quot;: &quot;rgb&quot;, &quot;lineColorSpace&quot;: &quot;rgb&quot;});&amp;#10;}&amp;#10;triangle1.draw();&amp;#10;for (var i, _pj_c = 0, _pj_a = circlepos, _pj_b = _pj_a.length; (_pj_c &lt; _pj_b); _pj_c += 1) {&amp;#10;    i = _pj_a[_pj_c];&amp;#10;    if ((pink_circle_pos_tuple === i)) {&amp;#10;        circle = new visual.Circle({&quot;win&quot;: psychoJS.window, &quot;edges&quot;: &quot;circle&quot;, &quot;pos&quot;: i, &quot;size&quot;: 0.1, &quot;fillColor&quot;: [1.0, (- 1.0), 1.0], &quot;fillColorSpace&quot;: &quot;rgb&quot;});&amp;#10;    } else {&amp;#10;        circle = new visual.Circle({&quot;win&quot;: psychoJS.window, &quot;edges&quot;: &quot;circle&quot;, &quot;pos&quot;: i, &quot;size&quot;: 0.1, &quot;fillColor&quot;: [(- 0.6708), 0.6708, (- 0.6708)], &quot;fillColorSpace&quot;: &quot;rgb&quot;});&amp;#10;    }&amp;#10;    circle.draw();&amp;#10;}&amp;#10;psychoJS.window.update();&amp;#10;while ((triangle1.contains(mouse) === false)) {&amp;#10;    core.wait(0.1);&amp;#10;}&amp;#10;continueRoutine = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Garv's Code&amp;#10;# Had to do some research on data types as that was causing&amp;#10;#some problems with the code. Used loops to implement the code. &amp;#10;import ast&amp;#10;&amp;#10;fixation_square = visual.Polygon(win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)&amp;#10;fixation_square.draw()&amp;#10;win.update()&amp;#10;core.wait (0.2)&amp;#10;mouse = event.Mouse(win = win)&amp;#10;mouse.mouseClock = core.Clock()&amp;#10;mouse.setPos(0)&amp;#10;&amp;#10;circlepos = [(0,0.25), (0.1875, 0.1875), (0.25, 0), (0.1875, -0.1875), (0, -0.25), (-0.1875, -0.1875), (-0.25, 0), (-0.1875, 0.1875)]&amp;#10;triangle_pos_tuple = tuple(ast.literal_eval(triangle_pos)) # Codes for converting the triangle_pos value stored as a string into a tuple. &amp;#10;if pink_circle_pos == 0:&amp;#10;    pink_circle_pos_tuple = 0&amp;#10;else:&amp;#10;    pink_circle_pos_tuple = tuple(ast.literal_eval(pink_circle_pos))&amp;#10;&amp;#10;circlepos.remove(triangle_pos_tuple)&amp;#10;&amp;#10;if triangle_color == 'g':&amp;#10;    triangle1 = visual.Polygon(win = win, edges = 3, pos = triangle_pos_tuple, size = 0.125, fillColor = [-0.6708, 0.6708, -0.6708], lineColor = [-0.6708, 0.6708, -0.6708], fillColorSpace = 'rgb', lineColorSpace = 'rgb')&amp;#10;else:&amp;#10;    triangle1 = visual.Polygon(win = win, edges = 3, pos = triangle_pos_tuple, size = 0.125, fillColor = [1.0000, -1.0000, 1.0000], lineColor = [1.0000, -1.0000, 1.0000], fillColorSpace = 'rgb', lineColorSpace = 'rgb')&amp;#10;triangle1.draw()&amp;#10;&amp;#10; &amp;#10;for i in circlepos:&amp;#10;    if pink_circle_pos_tuple == i:&amp;#10;        circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [1.0000, -1.0000, 1.0000], fillColorSpace = 'rgb')&amp;#10;    else:&amp;#10;        circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [-0.6708, 0.6708, -0.6708], fillColorSpace = 'rgb')&amp;#10;    circle.draw()&amp;#10;&amp;#10;win.update()   &amp;#10;while triangle1.contains(mouse) == False:&amp;#10;    core.wait(0.1) &amp;#10;continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -584,9 +584,136 @@
         <Param val="test_trial_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
+    <Routine name="Test_Trial_routine_instructions">
+      <RoutineSettingsComponent name="Test_Trial_routine_instructions" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="Test_Trial_routine_instructions" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="The follwing images will serve as test trials so that you can get accustomed to how the actual trials will proceed. Please note that once you begin, it is advised that you do not exit the program at any point in time. &amp;#10;&amp;#10;Please Press the SPACE BAR to continue to the test trials. &amp;#10;" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_3" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_3" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="1" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Actual_Trial_Instructions">
+      <RoutineSettingsComponent name="Actual_Trial_Instructions" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="Actual_Trial_Instructions" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="actual_trial_intructions" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="actual_trial_intructions" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Congratulations on competing the trial! You will now begin the actual experiment. Try your best to choose the triangle in as little time as possible. For proper data collection, it is advised that you do not exit the trial once it begins. &amp;#10;&amp;#10;Please press the SPACE BAR to continue to the trial. " valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_4" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_4" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="1" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="Welcome_Page"/>
+    <Routine name="Test_Trial_routine_instructions"/>
     <LoopInitiator loopType="TrialHandler" name="test_trial_before_experiment">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('triangle_pos', '(0, 0.25)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.1875, 0.1875)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.25, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.1875, -0.1875)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(-0.1875, -0.1875)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(-0.25, 0)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.25, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', '(-0.1875, -0.1875)')]), OrderedDict([('triangle_pos', '(-0.1875, 0.1875)'), ('triangle_color', 'g'), ('pink_circle_pos', '(-0.25, 0)')]), OrderedDict([('triangle_pos', '(-0.25, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', '(0.25, 0)')])]" valType="str"/>
@@ -600,6 +727,7 @@
     </LoopInitiator>
     <Routine name="test_trial"/>
     <LoopTerminator name="test_trial_before_experiment"/>
+    <Routine name="Actual_Trial_Instructions"/>
     <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'triangle_pos': (0, 0.25), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.1875, 0.1875), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.25, 0), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.1875, -0.1875), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0, -0.25), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.1875, -0.1875), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.25, 0), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.1875, 0.1875), 'triangle_color': 'g', 'pink_circle_pos': 0.0}, {'triangle_pos': (0, 0.25), 'triangle_color': 'g', 'pink_circle_pos': (-0.1875, -0.1875)}, {'triangle_pos': (0.1875, 0.1875), 'triangle_color': 'g', 'pink_circle_pos': (0, -0.25)}, {'triangle_pos': (0.25, 0), 'triangle_color': 'g', 'pink_circle_pos': (0, 0.25)}, {'triangle_pos': (0.1875, -0.1875), 'triangle_color': 'g', 'pink_circle_pos': (0.25, 0)}, {'triangle_pos': (0, -0.25), 'triangle_color': 'g', 'pink_circle_pos': (-0.1875, 0.1875)}, {'triangle_pos': (-0.1875, -0.1875), 'triangle_color': 'g', 'pink_circle_pos': (-0.25, 0)}, {'triangle_pos': (-0.25, 0), 'triangle_color': 'g', 'pink_circle_pos': (0.1875, -0.1875)}, {'triangle_pos': (-0.1875, 0.1875), 'triangle_color': 'g', 'pink_circle_pos': (0.1875, 0.1875)}, {'triangle_pos': (0, 0.25), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.1875, 0.1875), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.25, 0), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (0.1875, -0.1875), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (0, -0.25), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.1875, -0.1875), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.25, 0), 'triangle_color': 'p', 'pink_circle_pos': 0.0}, {'triangle_pos': (-0.1875, 0.1875), 'triangle_color': 'p', 'pink_circle_pos': 0.0}]" valType="str"/>
