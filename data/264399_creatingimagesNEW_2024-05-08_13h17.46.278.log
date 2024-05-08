@@ -1,0 +1,10 @@
+18.2394 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+18.3480 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+1.3517 	WARNING 	t of last frame was 39.37ms (=1/25)
+3.8155 	WARNING 	t of last frame was 35.21ms (=1/28)
+4.0784 	WARNING 	t of last frame was 262.88ms (=1/3)
+4.9865 	WARNING 	t of last frame was 908.15ms (=1/1)
+5.2471 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
