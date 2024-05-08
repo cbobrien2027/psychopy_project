@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
-    on May 07, 2024, at 16:30
+This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
+    on Tue May  7 21:25:32 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ deviceManager = hardware.DeviceManager()
 # ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
-psychopyVersion = '2024.1.1'
+psychopyVersion = '2024.1.4'
 expName = 'creatingimagesNEW'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
@@ -60,12 +60,15 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = False
+_winSize = [1536, 864]
 _loggingLevel = logging.getLevel('warning')
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
     if prefs.piloting['forceWindowed']:
         _fullScr = False
+        # set window size
+        _winSize = prefs.piloting['forcedWindowSize']
     # override logging level
     _loggingLevel = logging.getLevel(
         prefs.piloting['pilotLoggingLevel']
@@ -128,7 +131,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\prami\\OneDrive\\Desktop\\CLPS_0950\\psychopy_project\\creatingimagesNEW_lastrun.py',
+        originPath='/Users/carolineobrien/Documents/GitHub/psychopy_project/creatingimagesNEW_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -179,7 +182,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=[1536, 864], fullscr=_fullScr, screen=0,
+            size=_winSize, fullscr=_fullScr, screen=0,
             winType='pyglet', allowStencil=False,
             monitor='testMonitor', color=[-1,-1,-1], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -677,7 +680,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     test_trial_before_experiment = data.TrialHandler(nReps=3.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('C:/Users/prami/OneDrive/Desktop/Conditions_Spreadsheet_for_test_trials.csv'),
+        trialList=data.importConditions('/Users/carolineobrien/Downloads/Conditions_Spreadsheet_for_test_trials.csv'),
         seed=None, name='test_trial_before_experiment')
     thisExp.addLoop(test_trial_before_experiment)  # add the loop to the experiment
     thisTest_trial_before_experiment = test_trial_before_experiment.trialList[0]  # so we can initialise stimuli with some values

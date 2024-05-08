@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2024.1.1">
+<PsychoPy2experiment encoding="utf-8" version="2024.1.4">
   <Settings>
     <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
@@ -717,7 +717,7 @@
     <LoopInitiator loopType="TrialHandler" name="test_trial_before_experiment">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('triangle_pos', '(0, 0.25)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.1875, 0.1875)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.25, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.1875, -0.1875)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(-0.1875, -0.1875)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(-0.25, 0)'), ('triangle_color', 'p'), ('pink_circle_pos', 0.0)]), OrderedDict([('triangle_pos', '(0.25, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', '(-0.1875, -0.1875)')]), OrderedDict([('triangle_pos', '(-0.1875, 0.1875)'), ('triangle_color', 'g'), ('pink_circle_pos', '(-0.25, 0)')]), OrderedDict([('triangle_pos', '(-0.25, 0)'), ('triangle_color', 'g'), ('pink_circle_pos', '(0.25, 0)')])]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="C:/Users/prami/OneDrive/Desktop/Conditions_Spreadsheet_for_test_trials.csv" valType="file"/>
+      <Param name="conditionsFile" updates="None" val="/Users/carolineobrien/Downloads/Conditions_Spreadsheet_for_test_trials.csv" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
