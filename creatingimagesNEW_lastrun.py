@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Tue May  7 21:25:32 2024
+    on Thu May  9 12:55:45 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -680,7 +680,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     test_trial_before_experiment = data.TrialHandler(nReps=3.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('/Users/carolineobrien/Downloads/Conditions_Spreadsheet_for_test_trials.csv'),
+        trialList=data.importConditions('Conditions_Spreadsheet_for_test_trials.csv'),
         seed=None, name='test_trial_before_experiment')
     thisExp.addLoop(test_trial_before_experiment)  # add the loop to the experiment
     thisTest_trial_before_experiment = test_trial_before_experiment.trialList[0]  # so we can initialise stimuli with some values
@@ -927,9 +927,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=3.0, method='random', 
+    trials = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('Conditions Spreadsheet-2.xlsx'),
+        trialList=data.importConditions('ConditionsSpreadSheet.xlsx'),
         seed=None, name='trials')
     thisExp.addLoop(trials)  # add the loop to the experiment
     thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -959,26 +959,32 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('code_attempt.started', globalClock.getTime(format='float'))
         # Run 'Begin Routine' code from code_2
-        #Caroline coded lines 1-8 and lines 13-93. 25 hours.
-        fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
-        fixation_square.draw()
-        win.update()
-        core.wait (0.2) 
-        
-        mouse = event.Mouse(win = win)
-        mouse.mouseClock = core.Clock()
-        
         #Garv coded.
         mouse.setPos(0)
         
-        #Sets circle1 position.
+        #Caroline coded lines 4-113. 25 hours.
+        #Creates a fixation square that resets every trial - to avoid biases.
+        fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
+        fixation_square.draw()
+        win.update()
+        #Lasts for 0.2 seconds before circles/triangle appears. 
+        core.wait (0.2) 
         
+        #Creates the mouse.
+        mouse = event.Mouse(win = win)
+        mouse.mouseClock = core.Clock()
+        
+        #Sets circle1 position.
+        #All of the code reflects the following methodology. 
+        #If the triangle is in the top position, the first circle is in the second position. 
+        #In all other cases, the first circle is in the first position.
         if triangle_pos != (0, 0.25):
             circle1_pos = (0, 0.25)
         else:
             circle1_pos = (0.1875, 0.1875)
            
         #Sets circle2 position.
+        #Circle 2 is affected by the triangle being in position 1 or position 2 (This increases for every subsequent circle).
         if triangle_pos != (0.1875, 0.1875) and triangle_pos != (0, 0.25):
             circle2_pos = (0.1875, 0.1875)
         else:
@@ -1016,12 +1022,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         #Sets the triangle color.
         if triangle_color == 'g':
-            triangle1_color = [-0.6078, 0.6708, -0.6708]
+            triangle1_color = [-0.5833, 0.3402, -0.7333]
+        elif triangle_color == 'r':
+            triangle1_color = [1.0000, -1.0000, -1.0000]
         else:
-            triangle1_color = [1.0000, -1.0000, 1.0000]
+            triangle1_color = [-1.0000, 0.0039, 0.0039]
             
-        #Sets the circle colors - all green except if the position matches pink_circle_pos.
-        #Then it is set to pink.
+        #Sets the circle colors - all green except if the position matches red_circle_pos or blue_circle_pos.
+        #Then it is set to red or blue, respectively.
         
         circle1_color = []
         circle2_color = []
@@ -1034,25 +1042,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         circle_positions = [circle1_pos, circle2_pos, circle3_pos, circle4_pos, circle5_pos, circle6_pos, circle7_pos]
         circle_colors = [circle1_color, circle2_color, circle3_color, circle4_color, circle5_color, circle6_color, circle7_color]
         
+        #Iterates through the different circle colors.
         for ii in range (len (circle_colors)):
-            if circle_positions [ii] == pink_circle_pos:
-                circle_colors[ii] = [1.0000, -1.0000, 1.0000]
+            #If the circle is at the red position, it is red.
+            if circle_positions [ii] == red_circle_pos:
+                circle_colors[ii] = [1.0000, -1.0000, -1.0000]
+            #If it is at the blue position, it is blue.
+            elif circle_positions [ii] == blue_circle_pos:
+                circle_colors[ii] = [-1.0000, 0.0039, 0.0039]
+            #If it is not at the red or blue position (or if all the circles in the trial are green), the circle is green.
             else:
-                circle_colors[ii] = [-0.6708, 0.6708, -0.6708]
+                circle_colors[ii] = [-0.5833, 0.3402, -0.7333]
         
+        #Draws each of the circles.
         for ii in range (len(circle_colors)):
             circles = visual.Circle (win = win, edges = 'circle', pos = circle_positions[ii], size = 0.1, fillColor = circle_colors[ii], fillColorSpace = 'rgb')
             circles.draw()
+        #Draws the triangle.
         triangle1 = visual.Polygon (win = win, edges = 3, pos = triangle_pos, size = 0.125, fillColor = triangle1_color, lineColor = triangle1_color, fillColorSpace = 'rgb', lineColorSpace = 'rgb')
         triangle1.draw()
+        #Draws the fixation square with it - so it appears as a constant.
         fixation_square.draw()
         win.update()
                     
+        #The image won't end until the mouse hovers over the triangle. Continuous loop until broken.
         while triangle1.contains(mouse) == False:
             core.wait(0.1) # I changed the core wait time to be lower so that the delay is lower. 
             
+        #The routine will end/advance to the next image once the mouse hovers over the triangle.
         if triangle1.contains(mouse) == True:
             continueRoutine = False
+            
+        keys = event.getKeys()
+        if 'escape' in keys:
+            core.quit()
         # keep track of which components have finished
         code_attemptComponents = []
         for thisComponent in code_attemptComponents:
@@ -1113,7 +1136,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 3.0 repeats of 'trials'
+    # completed 1.0 repeats of 'trials'
     
     
     # --- Prepare to start Routine "End_Routine" ---
