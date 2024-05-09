@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Wed May  8 20:51:34 2024
+    on Wed May  8 22:10:17 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -929,7 +929,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     trials = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('Conditions Spreadsheet-2.xlsx'),
+        trialList=data.importConditions('ConditionsSpreadSheet.xlsx'),
         seed=None, name='trials')
     thisExp.addLoop(trials)  # add the loop to the experiment
     thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -959,12 +959,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         thisExp.addData('code_attempt.started', globalClock.getTime(format='float'))
         # Run 'Begin Routine' code from code_2
-        #Caroline coded lines 1-11 and lines 16-93. 25 hours.
-        #Creates a fixation square that resets every trial - to avoid biases.
-        
         #Garv coded.
         mouse.setPos(0)
         
+        #Caroline coded lines 4-113. 25 hours.
+        #Creates a fixation square that resets every trial - to avoid biases.
         fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
         fixation_square.draw()
         win.update()
