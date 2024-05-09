@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Wed May  8 22:10:17 2024
+    on Thu May  9 12:55:45 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1072,6 +1072,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         #The routine will end/advance to the next image once the mouse hovers over the triangle.
         if triangle1.contains(mouse) == True:
             continueRoutine = False
+            
+        keys = event.getKeys()
+        if 'escape' in keys:
+            core.quit()
         # keep track of which components have finished
         code_attemptComponents = []
         for thisComponent in code_attemptComponents:
