@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
-    on May 09, 2024, at 21:43
+    on May 10, 2024, at 13:04
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -675,9 +675,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     routineTimer.reset()
     
     # set up handler to look after randomisation of conditions etc
-    test_trial_before_experiment = data.TrialHandler(nReps=3.0, method='random', 
+    test_trial_before_experiment = data.TrialHandler(nReps=1.0, method='random', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('Conditions_Spreadsheet_for_test_trials.csv'),
+        trialList=data.importConditions('C:/Users/prami/OneDrive/Desktop/ConditionsSpreadSheet_test_trial_data_v2.csv'),
         seed=None, name='test_trial_before_experiment')
     thisExp.addLoop(test_trial_before_experiment)  # add the loop to the experiment
     thisTest_trial_before_experiment = test_trial_before_experiment.trialList[0]  # so we can initialise stimuli with some values
@@ -712,29 +712,27 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         #some problems with the code. Used loops to implement the code. 
         import ast
         
+        keys = event.getKeys()
+        if 'escape' in keys:
+            core.quit()
         fixation_square = visual.Polygon(win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
         fixation_square.draw()
+        core.wait(0.2)
         win.update()
-        core.wait (0.2)
         mouse = event.Mouse(win = win)
         mouse.mouseClock = core.Clock()
         mouse.setPos(0)
         
         circlepos = [(0,0.25), (0.1875, 0.1875), (0.25, 0), (0.1875, -0.1875), (0, -0.25), (-0.1875, -0.1875), (-0.25, 0), (-0.1875, 0.1875)]
         triangle_pos_tuple = tuple(ast.literal_eval(triangle_pos)) # Codes for converting the triangle_pos value stored as a string into a tuple. 
-        
-        if pink_circle_pos == '0':
-            pink_circle_pos_tuple = 0
+        if red_circle_pos == '0' or red_circle_pos == 0.0:
+            red_circle_pos_tuple = 0
         else:
-            pink_circle_pos_tuple = tuple(ast.literal_eval(pink_circle_pos))
-            print(1)
-        if blue_circle_pos == '0':
-            print(2)
+            red_circle_pos_tuple = tuple(ast.literal_eval(red_circle_pos))
+        if blue_circle_pos == '0' or blue_circle_pos == 0.0:
             blue_circle_pos_tuple = 0
-            print(blue_circle_pos)
         else:
             blue_circle_pos_tuple = tuple(ast.literal_eval(blue_circle_pos))
-            print(blue_circle_pos_tuple)
         
         circlepos.remove(triangle_pos_tuple)
         
@@ -743,19 +741,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         elif triangle_color == 'b':
             triangle1 = visual.Polygon(win = win, edges = 3, pos = triangle_pos_tuple, size = 0.125, fillColor = [-1.0000, 0.0039, 0.0039], lineColor = [-1.0000, 0.0039, 0.0039], fillColorSpace = 'rgb', lineColorSpace = 'rgb')
         else:
-            triangle1 = visual.Polygon(win = win, edges = 3, pos = triangle_pos_tuple, size = 0.125, fillColor = [1.0000, -1.0000, 1.0000], lineColor = [1.0000, -1.0000, 1.0000], fillColorSpace = 'rgb', lineColorSpace = 'rgb')
+            triangle1 = visual.Polygon(win = win, edges = 3, pos = triangle_pos_tuple, size = 0.125, fillColor = [1.0000, -1.0000, -1.0000], lineColor = [1.0000, -1.0000, -1.0000], fillColorSpace = 'rgb', lineColorSpace = 'rgb')
         triangle1.draw()
         
          
         for i in circlepos:
-            if pink_circle_pos_tuple == i:
-                circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [1.0000, -1.0000, 1.0000], fillColorSpace = 'rgb')
+            if red_circle_pos_tuple == i:
+                circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [1.0000, -1.0000, -1.0000], fillColorSpace = 'rgb')
             elif blue_circle_pos_tuple == i:
                 circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [-1.0000, 0.0039, 0.0039], fillColorSpace = 'rgb')
             else:
                 circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [-0.5833, 0.3402, -0.7333], fillColorSpace = 'rgb')
             circle.draw()
         
+        fixation_square.draw()
         win.update()   
         while triangle1.contains(mouse) == False:
             core.wait(0.1) 
@@ -817,7 +816,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 3.0 repeats of 'test_trial_before_experiment'
+    # completed 1.0 repeats of 'test_trial_before_experiment'
     
     
     # --- Prepare to start Routine "Actual_Trial_Instructions" ---
@@ -1077,7 +1076,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     
         #The image won't end until the mouse hovers over the triangle. Continuous loop until broken.
         while triangle1.contains(mouse) == False:
-            core.wait(0.1) # I changed the core wait time to be lower so that the delay is lower. 
+            core.wait(0.05) # I changed the core wait time to be lower so that the delay is lower. 
             
         #The routine will end/advance to the next image once the mouse hovers over the triangle.
         if triangle1.contains(mouse) == True:
