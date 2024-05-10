@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Thu May  9 12:55:45 2024
+This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
+    on May 09, 2024, at 21:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,7 +39,7 @@ deviceManager = hardware.DeviceManager()
 # ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
-psychopyVersion = '2024.1.4'
+psychopyVersion = '2024.1.1'
 expName = 'creatingimagesNEW'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
@@ -60,15 +60,12 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = False
-_winSize = [1536, 864]
 _loggingLevel = logging.getLevel('warning')
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
     if prefs.piloting['forceWindowed']:
         _fullScr = False
-        # set window size
-        _winSize = prefs.piloting['forcedWindowSize']
     # override logging level
     _loggingLevel = logging.getLevel(
         prefs.piloting['pilotLoggingLevel']
@@ -131,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/carolineobrien/Documents/GitHub/psychopy_project/creatingimagesNEW_lastrun.py',
+        originPath='C:\\Users\\prami\\OneDrive\\Desktop\\CLPS_0950\\psychopy_project\\creatingimagesNEW_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -182,7 +179,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=0,
+            size=[1536, 864], fullscr=_fullScr, screen=0,
             winType='pyglet', allowStencil=False,
             monitor='testMonitor', color=[-1,-1,-1], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -385,7 +382,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "Test_Trial_routine_instructions" ---
     text = visual.TextStim(win=win, name='text',
-        text='The follwing images will serve as test trials so that you can get accustomed to how the actual trials will proceed. Please note that once you begin, it is advised that you do not exit the program at any point in time. \n\nPlease Press the SPACE BAR to continue to the test trials. \n',
+        text='The following images will serve as test trials so that you can get accustomed to how the actual trials will proceed. Please note that once you begin, it is advised that you do not exit the program at any point in time. \n\nPlease press the SPACE BAR to continue to the test trials. \n',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -405,7 +402,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     key_resp_4 = keyboard.Keyboard(deviceName='key_resp_4')
     
-    # --- Initialize components for Routine "code_attempt" ---
+    # --- Initialize components for Routine "Real_Trials" ---
     
     # --- Initialize components for Routine "End_Routine" ---
     End_Text = visual.TextStim(win=win, name='End_Text',
@@ -725,15 +722,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         circlepos = [(0,0.25), (0.1875, 0.1875), (0.25, 0), (0.1875, -0.1875), (0, -0.25), (-0.1875, -0.1875), (-0.25, 0), (-0.1875, 0.1875)]
         triangle_pos_tuple = tuple(ast.literal_eval(triangle_pos)) # Codes for converting the triangle_pos value stored as a string into a tuple. 
-        if pink_circle_pos == 0:
+        
+        if pink_circle_pos == '0':
             pink_circle_pos_tuple = 0
         else:
             pink_circle_pos_tuple = tuple(ast.literal_eval(pink_circle_pos))
+            print(1)
+        if blue_circle_pos == '0':
+            print(2)
+            blue_circle_pos_tuple = 0
+            print(blue_circle_pos)
+        else:
+            blue_circle_pos_tuple = tuple(ast.literal_eval(blue_circle_pos))
+            print(blue_circle_pos_tuple)
         
         circlepos.remove(triangle_pos_tuple)
         
         if triangle_color == 'g':
-            triangle1 = visual.Polygon(win = win, edges = 3, pos = triangle_pos_tuple, size = 0.125, fillColor = [-0.6708, 0.6708, -0.6708], lineColor = [-0.6708, 0.6708, -0.6708], fillColorSpace = 'rgb', lineColorSpace = 'rgb')
+            triangle1 = visual.Polygon(win = win, edges = 3, pos = triangle_pos_tuple, size = 0.125, fillColor = [-0.5833, 0.3402, -0.7333], lineColor = [-0.5833, 0.3402, -0.7333], fillColorSpace = 'rgb', lineColorSpace = 'rgb')
+        elif triangle_color == 'b':
+            triangle1 = visual.Polygon(win = win, edges = 3, pos = triangle_pos_tuple, size = 0.125, fillColor = [-1.0000, 0.0039, 0.0039], lineColor = [-1.0000, 0.0039, 0.0039], fillColorSpace = 'rgb', lineColorSpace = 'rgb')
         else:
             triangle1 = visual.Polygon(win = win, edges = 3, pos = triangle_pos_tuple, size = 0.125, fillColor = [1.0000, -1.0000, 1.0000], lineColor = [1.0000, -1.0000, 1.0000], fillColorSpace = 'rgb', lineColorSpace = 'rgb')
         triangle1.draw()
@@ -742,8 +750,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         for i in circlepos:
             if pink_circle_pos_tuple == i:
                 circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [1.0000, -1.0000, 1.0000], fillColorSpace = 'rgb')
+            elif blue_circle_pos_tuple == i:
+                circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [-1.0000, 0.0039, 0.0039], fillColorSpace = 'rgb')
             else:
-                circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [-0.6708, 0.6708, -0.6708], fillColorSpace = 'rgb')
+                circle = visual.Circle(win = win, edges = 'circle', pos = i, size = 0.1, fillColor = [-0.5833, 0.3402, -0.7333], fillColorSpace = 'rgb')
             circle.draw()
         
         win.update()   
@@ -954,15 +964,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             for paramName in thisTrial:
                 globals()[paramName] = thisTrial[paramName]
         
-        # --- Prepare to start Routine "code_attempt" ---
+        # --- Prepare to start Routine "Real_Trials" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('code_attempt.started', globalClock.getTime(format='float'))
-        # Run 'Begin Routine' code from code_2
+        thisExp.addData('Real_Trials.started', globalClock.getTime(format='float'))
+        # Run 'Begin Routine' code from real_trials_code
         #Garv coded.
         mouse.setPos(0)
         
-        #Caroline coded lines 4-113. 25 hours.
+        #Caroline coded lines 4-119. 27.5 hours.
         #Creates a fixation square that resets every trial - to avoid biases.
         fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
         fixation_square.draw()
@@ -1073,12 +1083,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if triangle1.contains(mouse) == True:
             continueRoutine = False
             
+        #Use escape key to leave experiment early.
+        #https://discourse.psychopy.org/t/escape-key-code/21020
         keys = event.getKeys()
         if 'escape' in keys:
             core.quit()
         # keep track of which components have finished
-        code_attemptComponents = []
-        for thisComponent in code_attemptComponents:
+        Real_TrialsComponents = []
+        for thisComponent in Real_TrialsComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
             thisComponent.tStartRefresh = None
@@ -1090,7 +1102,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
         frameN = -1
         
-        # --- Run Routine "code_attempt" ---
+        # --- Run Routine "Real_Trials" ---
         routineForceEnded = not continueRoutine
         while continueRoutine:
             # get current time
@@ -1112,7 +1124,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 routineForceEnded = True
                 break
             continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in code_attemptComponents:
+            for thisComponent in Real_TrialsComponents:
                 if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                     continueRoutine = True
                     break  # at least one component has not yet finished
@@ -1121,15 +1133,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
-        # --- Ending Routine "code_attempt" ---
-        for thisComponent in code_attemptComponents:
+        # --- Ending Routine "Real_Trials" ---
+        for thisComponent in Real_TrialsComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('code_attempt.stopped', globalClock.getTime(format='float'))
-        # Run 'End Routine' code from code_2
+        thisExp.addData('Real_Trials.stopped', globalClock.getTime(format='float'))
+        # Run 'End Routine' code from real_trials_code
         
         
-        # the Routine "code_attempt" was not non-slip safe, so reset the non-slip timer
+        # the Routine "Real_Trials" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
         
