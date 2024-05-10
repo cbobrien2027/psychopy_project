@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.4),
-    on Thu May  9 12:55:45 2024
+    on Thu May  9 19:52:13 2024
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -405,7 +405,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     key_resp_4 = keyboard.Keyboard(deviceName='key_resp_4')
     
-    # --- Initialize components for Routine "code_attempt" ---
+    # --- Initialize components for Routine "Real_Trials" ---
     
     # --- Initialize components for Routine "End_Routine" ---
     End_Text = visual.TextStim(win=win, name='End_Text',
@@ -954,15 +954,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             for paramName in thisTrial:
                 globals()[paramName] = thisTrial[paramName]
         
-        # --- Prepare to start Routine "code_attempt" ---
+        # --- Prepare to start Routine "Real_Trials" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('code_attempt.started', globalClock.getTime(format='float'))
-        # Run 'Begin Routine' code from code_2
+        thisExp.addData('Real_Trials.started', globalClock.getTime(format='float'))
+        # Run 'Begin Routine' code from real_trials_code
         #Garv coded.
         mouse.setPos(0)
         
-        #Caroline coded lines 4-113. 25 hours.
+        #Caroline coded lines 4-119. 27.5 hours.
         #Creates a fixation square that resets every trial - to avoid biases.
         fixation_square = visual.Polygon (win = win, edges = 4, radius = 0.1, pos = (0,0), size = 0.3, fillColor = [1, 1, 1], fillColorSpace = 'rgb', ori=90.0)
         fixation_square.draw()
@@ -1073,12 +1073,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if triangle1.contains(mouse) == True:
             continueRoutine = False
             
+        #Use escape key to leave experiment early.
+        #https://discourse.psychopy.org/t/escape-key-code/21020
         keys = event.getKeys()
         if 'escape' in keys:
             core.quit()
         # keep track of which components have finished
-        code_attemptComponents = []
-        for thisComponent in code_attemptComponents:
+        Real_TrialsComponents = []
+        for thisComponent in Real_TrialsComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
             thisComponent.tStartRefresh = None
@@ -1090,7 +1092,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         _timeToFirstFrame = win.getFutureFlipTime(clock="now")
         frameN = -1
         
-        # --- Run Routine "code_attempt" ---
+        # --- Run Routine "Real_Trials" ---
         routineForceEnded = not continueRoutine
         while continueRoutine:
             # get current time
@@ -1112,7 +1114,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 routineForceEnded = True
                 break
             continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in code_attemptComponents:
+            for thisComponent in Real_TrialsComponents:
                 if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                     continueRoutine = True
                     break  # at least one component has not yet finished
@@ -1121,15 +1123,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
-        # --- Ending Routine "code_attempt" ---
-        for thisComponent in code_attemptComponents:
+        # --- Ending Routine "Real_Trials" ---
+        for thisComponent in Real_TrialsComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('code_attempt.stopped', globalClock.getTime(format='float'))
-        # Run 'End Routine' code from code_2
+        thisExp.addData('Real_Trials.stopped', globalClock.getTime(format='float'))
+        # Run 'End Routine' code from real_trials_code
         
         
-        # the Routine "code_attempt" was not non-slip safe, so reset the non-slip timer
+        # the Routine "Real_Trials" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()
         
